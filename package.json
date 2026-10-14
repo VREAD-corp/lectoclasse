@@ -1,0 +1,10 @@
+{
+  "name": "lectoclasse",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-texte.mjs && node build.mjs",
+    "pdf": "node tools/build-texte.mjs && node build.mjs && node tools/make-pdf.mjs && node build.mjs",
+    "test": "node tools/build-texte.mjs && node build.mjs && node tests/site.check.mjs && node tests/gas.test.mjs && node tests/cro.check.mjs src/assets/cro.js"
+  }
+}

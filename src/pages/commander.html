@@ -1,0 +1,35 @@
+<!--meta {"path":"/commander/","page":"order","title":"Commander un kit ou une licence Lectoclasse (paiement par carte, hors UE)","description":"Commandez un kit Lectoclasse à 39 €, la licence collège ou la licence établissement. Paiement par carte en euros, réservé aux établissements hors UE."}-->
+<p class="kicker">Commande · établissements hors Union européenne</p>
+<h1>Commander</h1>
+<p class="lead">Choisissez l’offre, acceptez les conditions de vente, puis payez par carte en euros. La facture est établie au nom de l’établissement. Vous préférez un virement ? <a href="{{href:/devis/}}">Demandez un devis</a>.</p>
+
+<form id="order" class="card" novalidate>
+<fieldset class="choices" id="choix">
+<legend>Votre choix</legend>
+<label><input type="radio" name="offer" value="etablissement" checked> <span><strong>Licence établissement 2026-2027 : <span data-price-etab>390 €</span></strong><br><span class="small">Les huit kits du lycée et le rallye-lecture du collège, pour tout l’établissement, jusqu’au 31 août 2027.</span></span></label>
+<label id="college"><input type="radio" name="offer" value="college"> <span><strong>Licence collège 2026-2027 : 190 €</strong><br><span class="small">Le rallye-lecture sur douze classiques, de la 6e à la 3e.</span></span></label>
+<label><input type="radio" name="offer" value="kit"> <span><strong>Kit à l’unité : 39 €</strong><br><span class="small">Une œuvre au choix ci-dessous.</span></span></label>
+<div class="field" id="kit-field">
+<label for="kit">Œuvre</label>
+<select id="kit" name="kit">
+<option value="pot-bouille">Zola, Pot-Bouille</option>
+<option value="therese-raquin">Zola, Thérèse Raquin</option>
+<option value="servitude-volontaire">La Boétie, Discours de la servitude volontaire</option>
+<option value="pluralite-des-mondes">Fontenelle, Entretiens sur la pluralité des mondes</option>
+<option value="lettres-peruvienne">Graffigny, Lettres d’une Péruvienne</option>
+<option value="on-ne-badine">Musset, On ne badine pas avec l’amour</option>
+<option value="cahier-de-douai">Rimbaud, Cahier de Douai</option>
+</select>
+<p class="small">Le kit du <i>Menteur</i> n’est pas vendu : il est <a href="{{href:/echantillon/}}">gratuit</a>.</p>
+</div>
+</fieldset>
+<div class="note">
+<p><strong>Pré-commande.</strong> Les kits sont envoyés par e-mail au plus tard le 30 novembre 2026. Si nous ne tenons pas cette date, nous remboursons la totalité sur votre carte, sans démarche de votre part. Avant la livraison, un simple e-mail suffit pour être remboursé.</p>
+<p><strong>Hors Union européenne seulement.</strong> Le paiement refuse les pays de l’Union européenne et Monaco. Prix en euros, sans TVA française (prestation fournie par voie électronique à un établissement situé hors de l’UE). Les éventuelles taxes locales de votre pays ne sont pas incluses.</p>
+</div>
+<label class="inline"><input type="checkbox" id="cgv" name="cgv" required> <span>J’ai lu les <a href="{{href:/cgv/}}">conditions de vente</a> et je commande pour un établissement d’enseignement.</span></label>
+<p id="order-msg" class="msg err hidden" role="alert"></p>
+<div class="row" style="margin-top:12px"><button type="submit" class="btn" id="pay-open">Payer par carte</button><a class="btn ghost" href="{{href:/devis/}}">Demander un devis</a></div>
+</form>
+<div id="buy" aria-live="polite"></div>
+<p class="small">Paiement sécurisé par Stripe. Votre reçu ou votre facture (série G-) arrive par e-mail avec le message de confirmation. Une question avant de payer : <a href="mailto:octave@vread.fr">octave@vread.fr</a>.</p>

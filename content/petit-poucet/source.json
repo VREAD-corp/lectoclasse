@@ -1,0 +1,14 @@
+{
+  "work": "Le Petit Poucet",
+  "author": "Charles Perrault (1628-1703)",
+  "first_published": "1697, Histoires ou contes du temps passé (Paris, Claude Barbin)",
+  "url": "https://fr.wikisource.org/wiki/Contes_de_Perrault_(%C3%A9d._1902)/Le_Petit_Poucet",
+  "edition": "Les Contes de Perrault, texte établi par Pierre Féron, Tournai, Casterman, 1902, p. 39-47 (orthographe moderne)",
+  "moralite_url": "https://fr.wikisource.org/wiki/Histoires_ou_Contes_du_temps_pass%C3%A9_(1697)/Original/Le_petit_Poucet",
+  "moralite_note": "L'édition 1902 s'arrête avant la moralité. La moralité vient de l'édition originale de 1697 (Wikisource), orthographe modernisée par nous ; « on le l'aille » de la transcription corrigé en « on le raille ».",
+  "corrections": ["« il avait laisser tomber » -> « il avait laissé tomber »", "« et toi. Pierrot » -> « et toi, Pierrot »", "« s'était cachés » -> « s'étaient cachés »", "guillemet fermant isolé après « nageant dans leur sang » supprimé"],
+  "fetched": "2026-10-14",
+  "paragraphs": 33,
+  "words": 3595,
+  "licence": "Perrault est mort en 1703 : texte dans le domaine public en France, aux États-Unis et dans tous les pays (règle « auteur et traducteur morts avant 1925 » respectée ; Féron, éditeur 1902, n'apporte pas de texte original). La transcription Wikisource est sous licence CC BY-SA 4.0 : créditer « Wikisource » si le texte est redistribué."
+}

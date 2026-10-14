@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commander un kit ou une licence Lectoclasse (paiement par carte, hors UE)</title>
+<meta name="description" content="Commandez un kit Lectoclasse à 39 €, la licence collège ou la licence établissement. Paiement par carte en euros, réservé aux établissements hors UE.">
+<link rel="canonical" href="https://outils.vread.fr/lectoclasse/commander/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Lectoclasse">
+<meta property="og:title" content="Commander un kit ou une licence Lectoclasse (paiement par carte, hors UE)">
+<meta property="og:description" content="Commandez un kit Lectoclasse à 39 €, la licence collège ou la licence établissement. Paiement par carte en euros, réservé aux établissements hors UE.">
+<meta property="og:url" content="https://outils.vread.fr/lectoclasse/commander/">
+<meta name="theme-color" content="#8e2f1c">
+<link rel="icon" href="../assets/icon.svg?v=0219267122" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css?v=f419a756f4">
+<script>window.SITE = {"site":"lectoclasse","api":"https://script.google.com/macros/s/AKfycbzvBNaesku3n73KpIfj_CPWEQwZgd5oflkM2eRHDvXS3agUVAERdJFQK56KTcDcPOxguQ/exec","xp":"lc-prix","consent":"devis-2026-10-14","base":"../","mail":"octave@vread.fr","venture":"v4-47","products":{"etablissement":{"p390":["lectoclasse-etab-390",39000],"p290":["lectoclasse-etab-290",29000]},"college":["lectoclasse-college-190",19000],"kits":{"pot-bouille":["lectoclasse-kit-pot-bouille-39",3900,"Zola, Pot-Bouille"],"therese-raquin":["lectoclasse-kit-therese-raquin-39",3900,"Zola, Thérèse Raquin"],"servitude-volontaire":["lectoclasse-kit-servitude-volontaire-39",3900,"La Boétie, Discours de la servitude volontaire"],"pluralite-des-mondes":["lectoclasse-kit-pluralite-des-mondes-39",3900,"Fontenelle, Entretiens sur la pluralité des mondes"],"lettres-peruvienne":["lectoclasse-kit-lettres-peruvienne-39",3900,"Graffigny, Lettres d’une Péruvienne"],"on-ne-badine":["lectoclasse-kit-on-ne-badine-39",3900,"Musset, On ne badine pas avec l’amour"],"cahier-de-douai":["lectoclasse-kit-cahier-de-douai-39",3900,"Rimbaud, Cahier de Douai"]}},"ogc":"../assets/og-checkout.js?v=20e180e72b"};
+window.OCTAVE_XP = [{"id":"lc-prix","variants":["p390","p290"],"mode":"day","tz":"Europe/Paris","param":"prix","swap":{"p290":[["[data-price-etab]","text","290 €"]]}}];</script>
+<script src="../assets/cro.js?v=ace755eeac" data-site="lectoclasse" data-api="https://script.google.com/macros/s/AKfycbzvBNaesku3n73KpIfj_CPWEQwZgd5oflkM2eRHDvXS3agUVAERdJFQK56KTcDcPOxguQ/exec" data-hosts="outils.vread.fr" data-cta="a.btn,button.btn"></script>
+<script src="../assets/mesure.js?v=82f3437796" defer></script>
+<script src="../assets/app.js?v=0a827472d7" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Commander un kit ou une licence Lectoclasse (paiement par carte, hors UE)","url":"https://outils.vread.fr/lectoclasse/commander/","inLanguage":"fr","description":"Commandez un kit Lectoclasse à 39 €, la licence collège ou la licence établissement. Paiement par carte en euros, réservé aux établissements hors UE.","publisher":{"@type":"Organization","name":"READ FRANCE SAS","url":"https://outils.vread.fr/lectoclasse/","email":"octave@vread.fr","address":{"@type":"PostalAddress","streetAddress":"11 rue Rouvet","postalCode":"75019","addressLocality":"Paris","addressCountry":"FR"}}}</script>
+</head>
+<body data-page="order">
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top"><div class="wrap">
+<a class="logo" href="../">Lecto<span>classe</span> <small>par READ FRANCE</small></a>
+<nav aria-label="Navigation principale"><a href="../">Lycées</a><a href="../echantillon/">Kit gratuit</a><a href="../college/">Collège</a><a href="../fle/">FLE</a><a href="../commander/" aria-current="page">Commander</a><a href="../devis/">Devis</a></nav>
+</div></header>
+<main id="main" class="wrap">
+<p class="kicker">Commande · établissements hors Union européenne</p>
+<h1>Commander</h1>
+<p class="lead">Choisissez l’offre, acceptez les conditions de vente, puis payez par carte en euros. La facture est établie au nom de l’établissement. Vous préférez un virement ? <a href="../devis/">Demandez un devis</a>.</p>
+
+<form id="order" class="card" novalidate>
+<fieldset class="choices" id="choix">
+<legend>Votre choix</legend>
+<label><input type="radio" name="offer" value="etablissement" checked> <span><strong>Licence établissement 2026-2027 : <span data-price-etab>390 €</span></strong><br><span class="small">Les huit kits du lycée et le rallye-lecture du collège, pour tout l’établissement, jusqu’au 31 août 2027.</span></span></label>
+<label id="college"><input type="radio" name="offer" value="college"> <span><strong>Licence collège 2026-2027 : 190 €</strong><br><span class="small">Le rallye-lecture sur douze classiques, de la 6e à la 3e.</span></span></label>
+<label><input type="radio" name="offer" value="kit"> <span><strong>Kit à l’unité : 39 €</strong><br><span class="small">Une œuvre au choix ci-dessous.</span></span></label>
+<div class="field" id="kit-field">
+<label for="kit">Œuvre</label>
+<select id="kit" name="kit">
+<option value="pot-bouille">Zola, Pot-Bouille</option>
+<option value="therese-raquin">Zola, Thérèse Raquin</option>
+<option value="servitude-volontaire">La Boétie, Discours de la servitude volontaire</option>
+<option value="pluralite-des-mondes">Fontenelle, Entretiens sur la pluralité des mondes</option>
+<option value="lettres-peruvienne">Graffigny, Lettres d’une Péruvienne</option>
+<option value="on-ne-badine">Musset, On ne badine pas avec l’amour</option>
+<option value="cahier-de-douai">Rimbaud, Cahier de Douai</option>
+</select>
+<p class="small">Le kit du <i>Menteur</i> n’est pas vendu : il est <a href="../echantillon/">gratuit</a>.</p>
+</div>
+</fieldset>
+<div class="note">
+<p><strong>Pré-commande.</strong> Les kits sont envoyés par e-mail au plus tard le 30 novembre 2026. Si nous ne tenons pas cette date, nous remboursons la totalité sur votre carte, sans démarche de votre part. Avant la livraison, un simple e-mail suffit pour être remboursé.</p>
+<p><strong>Hors Union européenne seulement.</strong> Le paiement refuse les pays de l’Union européenne et Monaco. Prix en euros, sans TVA française (prestation fournie par voie électronique à un établissement situé hors de l’UE). Les éventuelles taxes locales de votre pays ne sont pas incluses.</p>
+</div>
+<label class="inline"><input type="checkbox" id="cgv" name="cgv" required> <span>J’ai lu les <a href="../cgv/">conditions de vente</a> et je commande pour un établissement d’enseignement.</span></label>
+<p id="order-msg" class="msg err hidden" role="alert"></p>
+<div class="row" style="margin-top:12px"><button type="submit" class="btn" id="pay-open">Payer par carte</button><a class="btn ghost" href="../devis/">Demander un devis</a></div>
+</form>
+<div id="buy" aria-live="polite"></div>
+<p class="small">Paiement sécurisé par Stripe. Votre reçu ou votre facture (série G-) arrive par e-mail avec le message de confirmation. Une question avant de payer : <a href="mailto:octave@vread.fr">octave@vread.fr</a>.</p>
+</main>
+<footer class="foot"><div class="wrap">
+<p><strong>Lectoclasse par READ FRANCE.</strong> Lectoclasse est une activité de READ FRANCE SAS (Paris), l’éditeur de Vread, conçue et exploitée par Octave, son agent IA. Ressource privée, sans lien avec l’AEFE ni avec le ministère de l’Éducation nationale.</p>
+<p><a href="../oeuvres/">Œuvres et droits</a> · <a href="../cgv/">Conditions de vente</a> · <a href="../confidentialite/">Confidentialité</a> · <a href="../mentions-legales/">Mentions légales</a> · <a href="mailto:octave@vread.fr">octave@vread.fr</a></p>
+<p class="small">Aucun cookie. Mesure d'audience anonyme et agrégée, sans identifiant.</p>
+</div></footer>
+</body>
+</html>

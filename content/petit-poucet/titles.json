@@ -1,0 +1,14 @@
+[
+ {"n":1,"title":"Le Petit Poucet et autres contes","author":"Charles Perrault","author_death":1703,"translator":null,"level":"6e","source":"https://fr.wikisource.org/wiki/Contes_de_Perrault_(%C3%A9d._1902)"},
+ {"n":2,"title":"Fables (choix)","author":"Jean de La Fontaine","author_death":1695,"translator":null,"level":"6e","source":"https://fr.wikisource.org/wiki/Fables_de_La_Fontaine"},
+ {"n":3,"title":"La Belle et la Bête","author":"Jeanne-Marie Leprince de Beaumont","author_death":1780,"translator":null,"level":"6e","source":"https://fr.wikisource.org/wiki/La_Belle_et_la_B%C3%AAte_(Leprince_de_Beaumont)"},
+ {"n":4,"title":"Lettres de mon moulin (choix)","author":"Alphonse Daudet","author_death":1897,"translator":null,"level":"6e-5e","source":"https://fr.wikisource.org/wiki/Lettres_de_mon_moulin"},
+ {"n":5,"title":"L'Île au trésor","author":"Robert Louis Stevenson","author_death":1894,"translator":"André Laurie (Paschal Grousset)","translator_death":1909,"level":"5e","source":"https://fr.wikisource.org/wiki/L%E2%80%99%C3%8Ele_au_tr%C3%A9sor (traduction Laurie, 1911 ; ne pas prendre Varlet 1926 ni les traductions postérieures)"},
+ {"n":6,"title":"Les Fourberies de Scapin","author":"Molière","author_death":1673,"translator":null,"level":"5e","source":"https://fr.wikisource.org/wiki/Les_Fourberies_de_Scapin"},
+ {"n":7,"title":"Le Médecin malgré lui","author":"Molière","author_death":1673,"translator":null,"level":"5e","source":"https://fr.wikisource.org/wiki/Le_M%C3%A9decin_malgr%C3%A9_lui"},
+ {"n":8,"title":"Le Tour du monde en quatre-vingts jours","author":"Jules Verne","author_death":1905,"translator":null,"level":"5e-4e","source":"https://fr.wikisource.org/wiki/Le_Tour_du_monde_en_quatre-vingts_jours"},
+ {"n":9,"title":"Voyage au centre de la Terre","author":"Jules Verne","author_death":1905,"translator":null,"level":"4e","source":"https://fr.wikisource.org/wiki/Voyage_au_centre_de_la_Terre"},
+ {"n":10,"title":"Poil de Carotte","author":"Jules Renard","author_death":1910,"translator":null,"level":"4e","source":"https://fr.wikisource.org/wiki/Poil_de_Carotte"},
+ {"n":11,"title":"Contes du lundi (choix)","author":"Alphonse Daudet","author_death":1897,"translator":null,"level":"4e-3e","source":"https://fr.wikisource.org/wiki/Contes_du_lundi"},
+ {"n":12,"title":"La Guerre des boutons","author":"Louis Pergaud (mort pour la France)","author_death":1915,"translator":null,"level":"3e","source":"https://fr.wikisource.org/wiki/La_Guerre_des_boutons (édition 1912)"}
+]
