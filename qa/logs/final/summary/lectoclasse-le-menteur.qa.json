@@ -1,0 +1,2360 @@
+{
+ "set": "lectoclasse/le-menteur",
+ "coldGate": "summary",
+ "title": "Le Menteur",
+ "language": "fr",
+ "engine": "1.0.0",
+ "generatedAt": "2026-10-16T19:05:51.608Z",
+ "totals": {
+  "items": 55,
+  "ok": 55,
+  "failing": 0,
+  "byCheck": {},
+  "cold": {
+   "pass": 42,
+   "leak": 0,
+   "partial": 13,
+   "pending": 0,
+   "exempt": 0
+  },
+  "warnings": 13
+ },
+ "items": [
+  {
+   "id": "acte-1.q1",
+   "type": "open",
+   "question": "En arrivant aux Tuileries, Dorante demande à Cliton s’il a bien l’air d’un cavalier. Pour qui Cliton prévoit-il « du malheur » ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q2",
+   "type": "open",
+   "question": "Selon Cliton, « la façon de donner vaut mieux que ce qu’on donne ». Citez un des exemples qu’il donne d’un cadeau fait avec adresse.",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q3",
+   "type": "open",
+   "question": "Depuis quand Dorante est-il à Paris, selon Cliton ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q4",
+   "type": "open",
+   "question": "Dorante dit qu’il doit au hasard, et non à son mérite, le bonheur de donner la main à Clarice. Que lui répond Clarice ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q5",
+   "type": "open",
+   "question": "Devant Clarice, Dorante s’invente un passé. D’où prétend-il revenir, et combien de temps y serait-il resté ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Il prétend revenir de la guerre en Allemagne, où il se serait couvert de gloire ; le résumé ne précise pas combien de temps il y serait resté.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q6",
+   "type": "open",
+   "question": "Par quel geste Cliton essaie-t-il d’arrêter son maître pendant ce récit ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q7",
+   "type": "open",
+   "question": "Selon le cocher, comment s’appelle « la plus belle des deux », et où loge-t-elle ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Elle s'appelle Lucrèce ; le résumé ne dit pas où elle loge.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q8",
+   "type": "open",
+   "question": "Dorante et Cliton ne sont pas d’accord sur l’identité de « la plus belle ». Quel argument chacun donne-t-il ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Dorante pense que la plus belle est celle qui lui a parlé ; Cliton pense que c'est l'autre, celle qui est restée silencieuse.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q9",
+   "type": "open",
+   "question": "Devant Alcippe et Philiste, depuis combien de temps Dorante prétend-il être de retour à Paris ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q10",
+   "type": "open",
+   "question": "Citez deux détails chiffrés du festin que Dorante prétend avoir offert.",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q11",
+   "type": "open",
+   "question": "Comment était décoré le cinquième bateau, celui où Dorante dit avoir servi le festin ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q12",
+   "type": "open",
+   "question": "Après le récit du festin, à quelles enchanteresses Cliton compare-t-il son maître, et pour quel métier lui trouve-t-il du talent ? En quoi ce compliment est-il ironique ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q1",
+   "type": "open",
+   "question": "Clarice ne verra Dorante que de sa fenêtre. À quoi compare-t-elle les visages, qui ne montrent que « le dehors » ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q2",
+   "type": "open",
+   "question": "Quand elle explique à Isabelle qu’elle veut connaître son futur époux avant de l’accepter, par quelle image Clarice désigne-t-elle le mariage ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q3",
+   "type": "open",
+   "question": "Isabelle fait remarquer à Clarice que l’inconnu des Tuileries ne lui déplaisait pas. Que répond Clarice ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q4",
+   "type": "open",
+   "question": "Clarice jure qu’elle ne connaît même pas le visage de Dorante. Quelle réponse moqueuse Alcippe lui fait-il ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q5",
+   "type": "open",
+   "question": "Quelle phrase revient plusieurs fois dans cette scène, dans la bouche de Clarice puis d’Alcippe ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q6",
+   "type": "open",
+   "question": "À la fin de son monologue (scène 4), Alcippe aperçoit Dorante. Pourquoi remet-il la querelle à plus tard ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q7",
+   "type": "open",
+   "question": "Pourquoi Géronte veut-il marier son fils au plus vite ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q8",
+   "type": "open",
+   "question": "Pour échapper à ce mariage, Dorante prétend être déjà marié. Avec qui, et dans quelle ville ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Avec une jeune fille dont il aurait été surpris la nuit dans la chambre (le résumé ne donne pas son nom), à Poitiers.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q9",
+   "type": "open",
+   "question": "Dans ce récit, quel objet trahit la présence de Dorante caché dans la chambre ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q10",
+   "type": "open",
+   "question": "Que devient l’épée de Dorante quand il veut se défendre ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q11",
+   "type": "open",
+   "question": "Pendant ce récit, une didascalie indique que Clarice et Lucrèce regardent depuis leurs fenêtres. Qu’est-ce que Clarice apprend ainsi, et pourquoi la situation est-elle comique ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Clarice entend Dorante raconter qu'il est déjà marié en secret à Poitiers ; c'est comique car il refuse d'épouser Clarice sans savoir qu'elle est la jeune femme des Tuileries qu'il courtise et qui l'observe.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q12",
+   "type": "open",
+   "question": "Dorante est sûr que le billet de « Lucrèce » vient de la dame qui lui a parlé. Comment Cliton lui dit-il qu’il pourra le vérifier ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q13",
+   "type": "open",
+   "question": "Dans son dernier monologue, Dorante résume sa journée en trois mots. Lesquels ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q1",
+   "type": "open",
+   "question": "Après le duel, Alcippe explique enfin sa colère. Qu’est-ce que Dorante lui aurait caché « à dessein » ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q2",
+   "type": "open",
+   "question": "Une fois Alcippe rassuré, quelle leçon Dorante lui donne-t-il sur sa façon d’agir ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q3",
+   "type": "open",
+   "question": "D’après Philiste, comment le page d’Alcippe s’est-il trompé sur les dames du bateau ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Le page a cru voir Clarice et Lucrèce se rendre à la fête, mais il s'est trompé.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q4",
+   "type": "open",
+   "question": "Complétez le jugement de Philiste sur Dorante : « vaillant par nature et ............................ ».",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q5",
+   "type": "open",
+   "question": "Selon Isabelle, pourquoi tant de jeunes gens parlent-ils de l’Allemagne et de ses batailles ? D’où tiennent-ils ce qu’ils racontent ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q6",
+   "type": "open",
+   "question": "Quelle nouvelle Clarice apprend-elle à Isabelle sur le projet de mariage avec Dorante ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Elle a appris que l'inconnu des Tuileries est le fils de Géronte et qu'il se prétend marié.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q7",
+   "type": "open",
+   "question": "Clarice se moque de ce « grand foudre de guerre ». Avec quelles armes, selon elle, Dorante a-t-il seulement combattu ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q8",
+   "type": "open",
+   "question": "Pour prouver qu’il « connaît » celle à qui il croit parler, Dorante donne des détails sur sa famille. Citez-en deux.",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q9",
+   "type": "open",
+   "question": "Quand Dorante jure « que le foudre » l’écrase s’il ment, que lui répond Clarice ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q10",
+   "type": "open",
+   "question": "Dorante refuse de renoncer à « sa part » auprès de la jeune femme. Par quelle image marchande Cliton lui répond-il, et que veut-il dire ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q1",
+   "type": "open",
+   "question": "Dorante veut appliquer le « secret » que Cliton lui a donné la veille : être libéral. Selon Cliton, auprès de quelle sorte de femme ce secret réussit-il, et que lui répond Dorante ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q2",
+   "type": "open",
+   "question": "Dans le duel qu’il invente, depuis combien de temps Dorante dit-il être l’ennemi d’Alcippe, et combien de coups lui aurait-il portés ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q3",
+   "type": "open",
+   "question": "Quand Alcippe annonce avec joie que son père vient d’arriver, quelle réflexion Dorante fait-il d’abord ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q4",
+   "type": "open",
+   "question": "Comment Dorante explique-t-il à Cliton la guérison si rapide d’Alcippe ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Il invente un remède miraculeux.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q5",
+   "type": "open",
+   "question": "Combien de langues Dorante prétend-il parler ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q6",
+   "type": "open",
+   "question": "Pour empêcher le voyage, Dorante dit que sa femme est enceinte. Depuis combien de temps, selon lui ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q7",
+   "type": "open",
+   "question": "Quand Géronte revient lui demander le nom de son beau-père, quel prétexte Dorante trouve-t-il d’abord pour ne pas le donner ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q8",
+   "type": "open",
+   "question": "Quel nom Dorante donne-t-il cette fois à son beau-père ? Comment se rattrape-t-il quand Géronte remarque l’erreur ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Le résumé ne donne pas le nom, seulement qu'il est différent de celui de la veille ; il se rattrape en affirmant que l'homme porte deux noms.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q9",
+   "type": "open",
+   "question": "Par quelle image Cliton, puis Sabine, désignent-ils l’argent que Dorante distribue (scènes 6 et 7) ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q10",
+   "type": "open",
+   "question": "Sabine montre à Lucrèce l’argent qu’elle a reçu de Dorante. Comment Lucrèce réagit-elle ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q11",
+   "type": "open",
+   "question": "Pendant que Clarice et Lucrèce parlent de Dorante, Sabine s’impatiente. Par quelle expression familière leur reproche-t-elle leurs manières ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q1",
+   "type": "open",
+   "question": "Quand il interroge Philiste, comment Géronte présente-t-il Pyrandre, le prétendu beau-père de son fils ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q2",
+   "type": "open",
+   "question": "Dans son monologue (scène 2), Géronte dit que Dorante, par son « discours en l’air », a fait de lui deux choses. Lesquelles ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Il a fait de lui une dupe et quelqu'un qui a répandu son mensonge, donc un menteur malgré lui.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q3",
+   "type": "open",
+   "question": "Selon Géronte, qu’est-ce qui fait qu’on est gentilhomme, et comment peut-on perdre ce titre ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Le résumé dit seulement qu'un menteur trahit sa noblesse : on perd son titre de gentilhomme en mentant.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q4",
+   "type": "open",
+   "question": "Quand Géronte le somme de dire le nom de sa femme, quel conseil Cliton souffle-t-il à Dorante ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q5",
+   "type": "open",
+   "question": "Quelle menace Géronte fait-il à son fils avant d’aller demander la main de la jeune fille ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "Il le menace s'il le trompe encore une fois (le résumé ne précise pas la menace).",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "The cold answer earns no marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q6",
+   "type": "open",
+   "question": "Dorante craint que les deux pères ne tombent pas d’accord. Par quelle image dit-il ce qui lui arriverait alors ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q7",
+   "type": "open",
+   "question": "Dans la scène 5, Sabine joue d’abord la comédie. Que prétend-elle que Lucrèce lui a fait, à elle, à cause de la lettre ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q8",
+   "type": "open",
+   "question": "Comment Dorante comprend-il qu’il s’est trompé sur les noms des deux jeunes filles ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "C'est Cliton qui lui révèle l'erreur sur les noms et la ruse de la fenêtre.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q9",
+   "type": "open",
+   "question": "Comment la pièce se termine-t-elle ? Quelle est la morale ironique que Cliton adresse au public ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Les pères s'accordent : Lucrèce est promise à Dorante et Clarice à Alcippe. Cliton conclut que le menteur s'est tiré de ses propres pièges avec beaucoup d'adresse.",
+   "failed": [],
+   "warnings": [
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  }
+ ]
+}

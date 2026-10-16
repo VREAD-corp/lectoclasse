@@ -128,3 +128,5 @@ table.board th:first-child, table.board td:first-child { text-align: left; }
   .sheet .textpage { columns: 1; font-size: 11pt; }
 }
 @media print { .tablewrap { overflow: visible; } table.board { font-size: 8.5pt; } }
+.checkpoint { border: 1px solid var(--line); border-left: 4px solid var(--muted); border-radius: 4px; padding: 6px 12px 10px; margin: 6px 0 16px; }
+.checkpoint p { margin: 4px 0; }

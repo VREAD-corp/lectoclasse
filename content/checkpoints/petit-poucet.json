@@ -1,0 +1,127 @@
+{
+ "format": "read-france.checkpoints/1",
+ "title": "Le Petit Poucet",
+ "author": "Charles Perrault",
+ "language": "fr",
+ "prompt_version": "engine:v4",
+ "engine": "1.0.0",
+ "segmentation": {
+  "mode": "words",
+  "segmentWordCount": 1000
+ },
+ "source": [
+  {
+   "unit": "segment-1",
+   "label": "Segment 1",
+   "sha256": "979b825114e6f222028bfa620ae27c9e022a41617bab0a1b276afe0cb1911199",
+   "words": 1000
+  },
+  {
+   "unit": "segment-2",
+   "label": "Segment 2",
+   "sha256": "c02ad1ebf8cdbe0972cff543f2e5dbccf8603264ad56a34095f3a35a8d24890b",
+   "words": 1000
+  },
+  {
+   "unit": "segment-3",
+   "label": "Segment 3",
+   "sha256": "afde6cfa6db8d2101ad3d221314e359fe4c3765c76172a0d58e124076b0c4c72",
+   "words": 1000
+  },
+  {
+   "unit": "segment-4",
+   "label": "Segment 4",
+   "sha256": "f3be801786479f86bd1eac4878c219c5453230555a2aa4c26c31aff693dbb2aa",
+   "words": 635
+  }
+ ],
+ "integrity": {
+  "totalSegments": 4,
+  "questionCount": 4,
+  "segmentsCovered": 4,
+  "missingSegments": [],
+  "extraSegments": [],
+  "duplicatedSegments": [],
+  "multiWordAnswers": []
+ },
+ "qa": {
+  "items": 4,
+  "ok": 4,
+  "failing": 0,
+  "byCheck": {},
+  "cold": {
+   "pass": 0,
+   "leak": 0,
+   "partial": 0,
+   "pending": 4,
+   "exempt": 0
+  },
+  "warnings": 0
+ },
+ "checkpoints": [
+  {
+   "segment": 1,
+   "unit": "segment-1",
+   "label": "Segment 1",
+   "question": "Comment s'appelle le fils aîné que la bûcheronne débarbouille quand les enfants rentrent de la forêt ?",
+   "answer": "Pierrot",
+   "evidence": "Vous êtes bien las, et vous avez bien faim ; et toi, Pierrot, comme te voilà crotté, viens que je te débarbouille »",
+   "window": {
+    "startWord": 51,
+    "endWord": 950
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  },
+  {
+   "segment": 2,
+   "unit": "segment-2",
+   "label": "Segment 2",
+   "question": "Quel animal entier rôtit à la broche pour le souper de l'Ogre quand sa femme fait entrer les enfants ?",
+   "answer": "mouton",
+   "evidence": "La femme de l’Ogre, qui crut qu’elle pourrait les cacher à son mari jusqu’au lendemain matin, les laissa entrer, et les mena se chauffer auprès d’un bon feu ; car il y avait un mouton tout entier à la broche, pour le souper de l’Ogre.",
+   "window": {
+    "startWord": 51,
+    "endWord": 950
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  },
+  {
+   "segment": 3,
+   "unit": "segment-3",
+   "label": "Segment 3",
+   "question": "Par-dessus quoi le Petit Poucet et ses frères sautent-ils, après être descendus dans le jardin de l'Ogre ?",
+   "answer": "muraille",
+   "evidence": "Ils descendirent doucement dans le jardin et sautèrent par-dessus la muraille.",
+   "window": {
+    "startWord": 51,
+    "endWord": 950
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  },
+  {
+   "segment": 4,
+   "unit": "segment-4",
+   "label": "Segment 4",
+   "question": "Quelle arme les prétendus voleurs tiennent-ils sur la gorge de l'Ogre, selon le récit du Petit Poucet à sa femme ?",
+   "answer": "poignard",
+   "evidence": "Dans le moment qu’ils lui tenaient le poignard sur la gorge, il m’a aperçu et m’a prié de vous venir avertir de l’état où il est, et de vous dire de me donner tout ce qu’il a de vaillant, sans en rien retenir, parce qu’autrement ils le tueront sans miséricorde.",
+   "window": {
+    "startWord": 1,
+    "endWord": 635
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  }
+ ]
+}

@@ -1,0 +1,568 @@
+{
+ "set": "lectoclasse/petit-poucet",
+ "coldGate": "summary",
+ "title": "Le Petit Poucet",
+ "language": "fr",
+ "engine": "1.0.0",
+ "generatedAt": "2026-10-16T19:05:52.122Z",
+ "totals": {
+  "items": 10,
+  "ok": 10,
+  "failing": 0,
+  "byCheck": {},
+  "cold": {
+   "pass": 10,
+   "leak": 0,
+   "partial": 0,
+   "pending": 0,
+   "exempt": 0
+  },
+  "warnings": 2
+ },
+ "items": [
+  {
+   "id": "poucet.q1",
+   "type": "mc",
+   "question": "Où le Petit Poucet se cache-t-il pour écouter ses parents, le soir où ils décident de perdre leurs enfants ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q2",
+   "type": "mc",
+   "question": "Où va-t-il remplir ses poches de petits cailloux blancs ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q3",
+   "type": "mc",
+   "question": "Le soir où les parents rentrent sans les enfants, la bûcheronne reproche à son mari de les avoir perdus. Comment s’appelle le bûcheron ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q4",
+   "type": "open",
+   "question": "Vrai ou faux ? La bûcheronne préfère Pierrot, son fils aîné, parce qu’il a les cheveux de la même couleur qu’elle. Justifie avec un mot du texte.",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "form:true_false"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:true_false",
+     "ok": false,
+     "severity": "warn",
+     "message": "True/false format (closed); keep only with a justification."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q5",
+   "type": "open",
+   "question": "En marchant vers la lumière, les enfants la perdent souvent de vue. À quel moment ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q6",
+   "type": "mc",
+   "question": "Quand la femme de l’Ogre leur apprend chez qui ils sont arrivés, que répond le Petit Poucet ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q7",
+   "type": "mc",
+   "question": "Qu’est-ce qui cuit à la broche quand les enfants viennent se chauffer près du feu ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q8",
+   "type": "open",
+   "question": "Vrai ou faux ? Les sept filles de l’Ogre ont de grands yeux bleus et le nez retroussé. Justifie avec un mot du texte.",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "form:true_false"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:true_false",
+     "ok": false,
+     "severity": "warn",
+     "message": "True/false format (closed); keep only with a justification."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q9",
+   "type": "mc",
+   "question": "L’Ogresse s’évanouit en découvrant ses filles égorgées. Comment l’Ogre la fait-il revenir à elle ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q10",
+   "type": "open",
+   "question": "À la fin, le conteur rapporte une autre version de l’histoire. Selon elle, à quelle distance de la cour se trouve l’armée dont le roi attend des nouvelles ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  }
+ ]
+}

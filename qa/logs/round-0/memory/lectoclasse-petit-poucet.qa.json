@@ -1,0 +1,608 @@
+{
+ "set": "lectoclasse/petit-poucet",
+ "coldGate": "memory",
+ "title": "Le Petit Poucet",
+ "language": "fr",
+ "engine": "1.0.0",
+ "generatedAt": "2026-10-16T19:06:27.961Z",
+ "totals": {
+  "items": 10,
+  "ok": 0,
+  "failing": 10,
+  "byCheck": {
+   "cold_answer": 10
+  },
+  "cold": {
+   "pass": 0,
+   "leak": 10,
+   "partial": 0,
+   "pending": 0,
+   "exempt": 0
+  },
+  "warnings": 12
+ },
+ "items": [
+  {
+   "id": "poucet.q1",
+   "type": "mc",
+   "question": "Où le Petit Poucet se cache-t-il pour écouter ses parents, le soir où ils décident de perdre leurs enfants ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Sous l'escabelle de son père.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q2",
+   "type": "mc",
+   "question": "Où va-t-il remplir ses poches de petits cailloux blancs ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Au bord d'un ruisseau.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q3",
+   "type": "mc",
+   "question": "Qu’arrive-t-il aux parents au moment où ils rentrent chez eux, après avoir laissé les enfants dans la forêt ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Le seigneur du village leur envoie dix écus qu'il leur devait.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q4",
+   "type": "open",
+   "question": "Vrai ou faux ? La bûcheronne préfère Pierrot, son fils aîné, parce qu’il a les cheveux de la même couleur qu’elle. Justifie avec un mot du texte.",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Vrai : elle l'aimait parce qu'il était un peu « rousseau », comme elle était un peu rousse.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit",
+    "form:true_false"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:true_false",
+     "ok": false,
+     "severity": "warn",
+     "message": "True/false format (closed); keep only with a justification."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q5",
+   "type": "open",
+   "question": "La deuxième fois, pourquoi le Petit Poucet ne peut-il pas aller chercher des cailloux ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Parce que la porte de la maison était fermée à double tour.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q6",
+   "type": "mc",
+   "question": "Perdus dans la forêt, comment les enfants trouvent-ils la maison de l’Ogre ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Le Petit Poucet grimpe en haut d'un arbre et aperçoit une petite lueur au loin.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q7",
+   "type": "mc",
+   "question": "Qu’est-ce qui cuit à la broche quand les enfants viennent se chauffer près du feu ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Un mouton tout entier.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q8",
+   "type": "open",
+   "question": "Vrai ou faux ? Quand les garçons vont se coucher, les sept filles de l’Ogre dorment avec un bonnet sur la tête. Justifie avec un mot du texte.",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Faux : elles ont chacune une « couronne » d'or sur la tête ; ce sont les garçons qui portent des bonnets.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit",
+    "form:true_false"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:true_false",
+     "ok": false,
+     "severity": "warn",
+     "message": "True/false format (closed); keep only with a justification."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q9",
+   "type": "mc",
+   "question": "Les bottes de l’Ogre sont très grandes. Pourquoi vont-elles bien aux pieds du Petit Poucet ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Ce sont des bottes fées : elles s'adaptent à la taille de celui qui les chausse.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "mc_options_distinct",
+     "ok": true,
+     "severity": "block",
+     "message": "Options distinct."
+    },
+    {
+     "id": "mc_key_valid",
+     "ok": true,
+     "severity": "block",
+     "message": "Key is one of the options."
+    },
+    {
+     "id": "mc_key_in_stem",
+     "ok": true,
+     "severity": "block",
+     "message": "The stem does not give the key away."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "warn",
+     "message": "Ends as a question."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "poucet.q10",
+   "type": "open",
+   "question": "À la fin, le conteur rapporte une autre version de l’histoire. Selon elle, quel métier le Petit Poucet fait-il pour le roi ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il devient courrier : il porte les ordres et nouvelles de l'armée pour le roi.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  }
+ ]
+}

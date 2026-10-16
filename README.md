@@ -4,10 +4,12 @@ Printable reading kits on the public-domain works of the French bac (épreuve de
 
 Live: https://outils.vread.fr/lectoclasse/ (GitHub Pages of `VREAD-corp/lectoclasse`, branch `main`, folder `/docs`). Journal: `VREAD-corp/octave-asset-ventures` (`ventures/lectoclasse/`, `experiments/V4-47.md`).
 
-- **Free:** `/echantillon/` complete kit on Corneille, *Le Menteur* (55 questions by act, answer key with act/scene, oral sheet) + full text page and PDFs; `/college/` rallye sample on Perrault, *Le Petit Poucet*.
+- **Free:** `/echantillon/` complete kit on Corneille, *Le Menteur* (55 questions by act, a one-word reading checkpoint per act, answer key with act/scene, oral sheet) + full text page and PDFs; `/college/` rallye sample on Perrault, *Le Petit Poucet*.
 - **Paid (card, EUR, non-EU buyers only):** octave-global-checkout products `lectoclasse-*` (venture `v4-47`), module vendored in `src/assets/og-checkout.js` (byte-identical to `octave-global-checkout/dist`). Pre-order, delivery by 30/11/2026 (placeholder) or full refund.
 - **Quote requests:** `/devis/` posts `action=devis` to this repo's Apps Script (`gas/`, project `lectoclasse-gas (READ FRANCE SAS)`, only scope `spreadsheets`, own Sheet, tab `Devis`). No payment, no e-mail sent. The same web app counts the cookieless audience (`mesure.js` v:2) and cro.js batches (`Cro.js` byte-identical to octave-checkout).
 - **Texts:** `content/le-menteur/texte.txt` (vread-public-domain-sources clean EPUB, Wikisource Marty-Laveaux 1862) → `tools/build-texte.mjs`; `content/petit-poucet/` (Wikisource 1902 + 1697 moralité). Rule: author and translator died before 1925.
+
+- **QA (2026-10-16):** every question went through READ FRANCE's reading engine (VREAD-corp/vread-reading-engine): static gates and a cold-answer gate (a pupil with only a summary must fail); 35 questions rewritten, logs in `qa/` ([qa/SUMMARY.md](qa/SUMMARY.md)). Checkpoints built with the engine (historical FR prompt v4), in `content/checkpoints/`, inserted by `tools/insert-checkpoints.mjs`.
 
 ```bash
 npm test          # build + site checks (lint-ia >= 85 on our own writing, wording rules, JSON-LD, links) + backend tests + cro.js check

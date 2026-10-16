@@ -2,3 +2,6 @@ node_modules/
 test-results/
 gas/.clasp.json
 gas/.deployment.json
+
+# The historical generation prompt of the private reading engine stays out of this public repo (regenerate it with the engine: checkpoints --prompts-out).
+qa/checkpoints/*.prompt.md

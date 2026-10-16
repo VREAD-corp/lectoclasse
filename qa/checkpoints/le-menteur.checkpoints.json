@@ -1,0 +1,149 @@
+{
+ "format": "read-france.checkpoints/1",
+ "title": "Le Menteur",
+ "author": "Pierre Corneille",
+ "language": "fr",
+ "prompt_version": "engine:v4",
+ "engine": "1.0.0",
+ "segmentation": {
+  "mode": "units",
+  "segmentWordCount": null
+ },
+ "source": [
+  {
+   "unit": "acte-1",
+   "label": "Acte I",
+   "sha256": "a97fbe4e43fc626d58194390a2e33ef8ef2bbb1429c024b048850c0b51f0198a",
+   "words": 3485
+  },
+  {
+   "unit": "acte-2",
+   "label": "Acte II",
+   "sha256": "6a16cf036e9dd331fb16c83f3425cb403ec96015360b671f8da564bf66ad208a",
+   "words": 3332
+  },
+  {
+   "unit": "acte-3",
+   "label": "Acte III",
+   "sha256": "e9c540aeb3963e96711866ac519f6cd85147a2c43ac5b806984e5dc5cfaa7ed0",
+   "words": 3334
+  },
+  {
+   "unit": "acte-4",
+   "label": "Acte IV",
+   "sha256": "5eebb58f91601098ec92883d411f8d24957fc131c6cd1d0f1d43e96e4f0d5b04",
+   "words": 3345
+  },
+  {
+   "unit": "acte-5",
+   "label": "Acte V",
+   "sha256": "504d2d14985f93268ac4775e224487224d0878c5fb1d6b1c210886c8990e8a95",
+   "words": 3535
+  }
+ ],
+ "integrity": {
+  "totalSegments": 5,
+  "questionCount": 5,
+  "segmentsCovered": 5,
+  "missingSegments": [],
+  "extraSegments": [],
+  "duplicatedSegments": [],
+  "multiWordAnswers": []
+ },
+ "qa": {
+  "items": 5,
+  "ok": 5,
+  "failing": 0,
+  "byCheck": {},
+  "cold": {
+   "pass": 0,
+   "leak": 0,
+   "partial": 0,
+   "pending": 5,
+   "exempt": 0
+  },
+  "warnings": 0
+ },
+ "checkpoints": [
+  {
+   "segment": 1,
+   "unit": "acte-1",
+   "label": "Acte I",
+   "question": "Pour faire croire à Clarice qu'il la courtise depuis un an, quels hommages Dorante prétend-il avoir été le seul à lui offrir ?",
+   "answer": "sérénades",
+   "evidence": "Vous n’avez que de moi reçu des sérénades ;",
+   "window": {
+    "startWord": 1293,
+    "endWord": 2192
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  },
+  {
+   "segment": 2,
+   "unit": "acte-2",
+   "label": "Acte II",
+   "question": "Qu'exige Alcippe de Clarice, avec sa main et sa foi, avant d'accepter d'écouter sa justification ?",
+   "answer": "baisers",
+   "evidence": "Deux baisers, et ta main, et ta foi.",
+   "window": {
+    "startWord": 1217,
+    "endWord": 2116
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  },
+  {
+   "segment": 3,
+   "unit": "acte-3",
+   "label": "Acte III",
+   "question": "Quel rôle Clarice confie-t-elle à Isabelle pendant son entretien de nuit avec Dorante sous la fenêtre de Lucrèce ?",
+   "answer": "sentinelle",
+   "evidence": "Isabelle, Durant notre entretien demeure en sentinelle.",
+   "window": {
+    "startWord": 1218,
+    "endWord": 2117
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  },
+  {
+   "segment": 4,
+   "unit": "acte-4",
+   "label": "Acte IV",
+   "question": "Quel nom Dorante donne-t-il à son prétendu beau-père quand Géronte, avant d'écrire, le lui redemande ?",
+   "answer": "Pyrandre",
+   "evidence": "Pyrandre.",
+   "window": {
+    "startWord": 1223,
+    "endWord": 2122
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  },
+  {
+   "segment": 5,
+   "unit": "acte-5",
+   "label": "Acte V",
+   "question": "Selon ce que Sabine prétend d'abord, qu'a fait sa maîtresse du billet de Dorante qu'elle lui a remis ?",
+   "answer": "déchiré",
+   "evidence": "Elle a tout déchiré.",
+   "window": {
+    "startWord": 1318,
+    "endWord": 2217
+   },
+   "origin": "offline",
+   "ok": true,
+   "failed": [],
+   "warnings": []
+  }
+ ]
+}

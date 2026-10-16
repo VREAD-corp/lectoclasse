@@ -1,0 +1,534 @@
+{
+ "set": "checkpoints/Le Menteur",
+ "coldGate": "summary",
+ "title": "Le Menteur",
+ "language": "fr",
+ "engine": "1.0.0",
+ "generatedAt": "2026-10-16T19:05:51.906Z",
+ "totals": {
+  "items": 5,
+  "ok": 5,
+  "failing": 0,
+  "byCheck": {},
+  "cold": {
+   "pass": 5,
+   "leak": 0,
+   "partial": 0,
+   "pending": 0,
+   "exempt": 0
+  },
+  "warnings": 0
+ },
+ "items": [
+  {
+   "id": "s1",
+   "type": "word",
+   "question": "Pour faire croire à Clarice qu'il la courtise depuis un an, quels hommages Dorante prétend-il avoir été le seul à lui offrir ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "answer_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "The answer is a word of the text."
+    },
+    {
+     "id": "form:answer_single_word",
+     "ok": true,
+     "severity": "block",
+     "message": "Un seul mot."
+    },
+    {
+     "id": "form:answer_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 2 et 40 caractères."
+    },
+    {
+     "id": "form:answer_chars",
+     "ok": true,
+     "severity": "block",
+     "message": "Lettres, chiffres, trait d'union ou apostrophe."
+    },
+    {
+     "id": "form:answer_generic",
+     "ok": true,
+     "severity": "block",
+     "message": "Réponse précise, pas un mot passe-partout."
+    },
+    {
+     "id": "form:answer_in_question",
+     "ok": true,
+     "severity": "block",
+     "message": "La question ne donne pas la réponse."
+    },
+    {
+     "id": "form:question_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 35 et 160 caractères."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "block",
+     "message": "Se termine par un point d'interrogation."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Pas de question oui/non : commence par « Qui », « Quel », « Comment », « Où »…"
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Pas de choix multiple."
+    },
+    {
+     "id": "answer_in_evidence",
+     "ok": true,
+     "severity": "warn",
+     "message": "Le passage cité contient la réponse."
+    },
+    {
+     "id": "form:validator",
+     "ok": true,
+     "severity": "warn",
+     "message": "Generation validator passed."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "type": "word",
+   "question": "Qu'exige Alcippe de Clarice, avec sa main et sa foi, avant d'accepter d'écouter sa justification ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "engagement",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "answer_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "The answer is a word of the text."
+    },
+    {
+     "id": "form:answer_single_word",
+     "ok": true,
+     "severity": "block",
+     "message": "Un seul mot."
+    },
+    {
+     "id": "form:answer_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 2 et 40 caractères."
+    },
+    {
+     "id": "form:answer_chars",
+     "ok": true,
+     "severity": "block",
+     "message": "Lettres, chiffres, trait d'union ou apostrophe."
+    },
+    {
+     "id": "form:answer_generic",
+     "ok": true,
+     "severity": "block",
+     "message": "Réponse précise, pas un mot passe-partout."
+    },
+    {
+     "id": "form:answer_in_question",
+     "ok": true,
+     "severity": "block",
+     "message": "La question ne donne pas la réponse."
+    },
+    {
+     "id": "form:question_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 35 et 160 caractères."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "block",
+     "message": "Se termine par un point d'interrogation."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Question ouverte."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Pas de choix multiple."
+    },
+    {
+     "id": "answer_in_evidence",
+     "ok": true,
+     "severity": "warn",
+     "message": "Le passage cité contient la réponse."
+    },
+    {
+     "id": "form:validator",
+     "ok": true,
+     "severity": "warn",
+     "message": "Generation validator passed."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Cold answer « engagement » is wrong."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "type": "word",
+   "question": "Quel rôle Clarice confie-t-elle à Isabelle pendant son entretien de nuit avec Dorante sous la fenêtre de Lucrèce ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "answer_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "The answer is a word of the text."
+    },
+    {
+     "id": "form:answer_single_word",
+     "ok": true,
+     "severity": "block",
+     "message": "Un seul mot."
+    },
+    {
+     "id": "form:answer_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 2 et 40 caractères."
+    },
+    {
+     "id": "form:answer_chars",
+     "ok": true,
+     "severity": "block",
+     "message": "Lettres, chiffres, trait d'union ou apostrophe."
+    },
+    {
+     "id": "form:answer_generic",
+     "ok": true,
+     "severity": "block",
+     "message": "Réponse précise, pas un mot passe-partout."
+    },
+    {
+     "id": "form:answer_in_question",
+     "ok": true,
+     "severity": "block",
+     "message": "La question ne donne pas la réponse."
+    },
+    {
+     "id": "form:question_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 35 et 160 caractères."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "block",
+     "message": "Se termine par un point d'interrogation."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Question ouverte."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Pas de choix multiple."
+    },
+    {
+     "id": "answer_in_evidence",
+     "ok": true,
+     "severity": "warn",
+     "message": "Le passage cité contient la réponse."
+    },
+    {
+     "id": "form:validator",
+     "ok": true,
+     "severity": "warn",
+     "message": "Generation validator passed."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "type": "word",
+   "question": "Quel nom Dorante donne-t-il à son prétendu beau-père quand Géronte, avant d'écrire, le lui redemande ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "answer_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "The answer is a word of the text."
+    },
+    {
+     "id": "form:answer_single_word",
+     "ok": true,
+     "severity": "block",
+     "message": "Un seul mot."
+    },
+    {
+     "id": "form:answer_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 2 et 40 caractères."
+    },
+    {
+     "id": "form:answer_chars",
+     "ok": true,
+     "severity": "block",
+     "message": "Lettres, chiffres, trait d'union ou apostrophe."
+    },
+    {
+     "id": "form:answer_generic",
+     "ok": true,
+     "severity": "block",
+     "message": "Réponse précise, pas un mot passe-partout."
+    },
+    {
+     "id": "form:answer_in_question",
+     "ok": true,
+     "severity": "block",
+     "message": "La question ne donne pas la réponse."
+    },
+    {
+     "id": "form:question_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 35 et 160 caractères."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "block",
+     "message": "Se termine par un point d'interrogation."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Question ouverte."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Pas de choix multiple."
+    },
+    {
+     "id": "answer_in_evidence",
+     "ok": true,
+     "severity": "warn",
+     "message": "Le passage cité contient la réponse."
+    },
+    {
+     "id": "form:validator",
+     "ok": true,
+     "severity": "warn",
+     "message": "Generation validator passed."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "type": "word",
+   "question": "Selon ce que Sabine prétend d'abord, qu'a fait sa maîtresse du billet de Dorante qu'elle lui a remis ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "Every passage is in the unit text."
+    },
+    {
+     "id": "answer_in_unit",
+     "ok": true,
+     "severity": "block",
+     "message": "The answer is a word of the text."
+    },
+    {
+     "id": "form:answer_single_word",
+     "ok": true,
+     "severity": "block",
+     "message": "Un seul mot."
+    },
+    {
+     "id": "form:answer_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 2 et 40 caractères."
+    },
+    {
+     "id": "form:answer_chars",
+     "ok": true,
+     "severity": "block",
+     "message": "Lettres, chiffres, trait d'union ou apostrophe."
+    },
+    {
+     "id": "form:answer_generic",
+     "ok": true,
+     "severity": "block",
+     "message": "Réponse précise, pas un mot passe-partout."
+    },
+    {
+     "id": "form:answer_in_question",
+     "ok": true,
+     "severity": "block",
+     "message": "La question ne donne pas la réponse."
+    },
+    {
+     "id": "form:question_length",
+     "ok": true,
+     "severity": "block",
+     "message": "Entre 35 et 160 caractères."
+    },
+    {
+     "id": "form:question_mark",
+     "ok": true,
+     "severity": "block",
+     "message": "Se termine par un point d'interrogation."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Question ouverte."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Pas de choix multiple."
+    },
+    {
+     "id": "answer_in_evidence",
+     "ok": true,
+     "severity": "warn",
+     "message": "Le passage cité contient la réponse."
+    },
+    {
+     "id": "form:validator",
+     "ok": true,
+     "severity": "warn",
+     "message": "Generation validator passed."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  }
+ ]
+}

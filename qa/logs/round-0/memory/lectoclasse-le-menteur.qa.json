@@ -1,0 +1,2531 @@
+{
+ "set": "lectoclasse/le-menteur",
+ "coldGate": "memory",
+ "title": "Le Menteur",
+ "language": "fr",
+ "engine": "1.0.0",
+ "generatedAt": "2026-10-16T19:06:27.490Z",
+ "totals": {
+  "items": 55,
+  "ok": 15,
+  "failing": 40,
+  "byCheck": {
+   "cold_answer": 40
+  },
+  "cold": {
+   "pass": 10,
+   "leak": 40,
+   "partial": 5,
+   "pending": 0,
+   "exempt": 0
+  },
+  "warnings": 60
+ },
+ "items": [
+  {
+   "id": "acte-1.q1",
+   "type": "open",
+   "question": "Dorante annonce un changement de vie dès le premier vers. Qu’a-t-il quitté, et pour quoi ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il a quitté la robe (les études de droit) pour l'épée, c'est-à-dire pour la vie de gentilhomme à Paris.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q2",
+   "type": "open",
+   "question": "Dans quelle ville Dorante faisait-il ses études ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "À Poitiers.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q3",
+   "type": "open",
+   "question": "Depuis quand Dorante est-il à Paris, selon Cliton ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q4",
+   "type": "open",
+   "question": "Quel petit accident permet à Dorante d’adresser la parole à Clarice ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Clarice trébuche (fait un faux pas) aux Tuileries, et Dorante lui offre la main pour la retenir.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q5",
+   "type": "open",
+   "question": "Devant Clarice, Dorante s’invente un passé. D’où prétend-il revenir, et combien de temps y serait-il resté ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il prétend revenir des guerres d'Allemagne, où il serait resté quatre ans.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q6",
+   "type": "open",
+   "question": "Par quel geste Cliton essaie-t-il d’arrêter son maître pendant ce récit ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q7",
+   "type": "open",
+   "question": "Selon le cocher, comment s’appelle « la plus belle des deux », et où loge-t-elle ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Selon le cocher, la plus belle s'appelle Lucrèce et elle loge à la Place Royale.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q8",
+   "type": "open",
+   "question": "Dorante et Cliton ne sont pas d’accord sur l’identité de « la plus belle ». Quel argument chacun donne-t-il ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Dorante pense que la plus belle est celle qui lui a parlé, puisque c'est elle qui l'a charmé ; Cliton pense au contraire que c'est l'autre, celle qui est restée silencieuse.",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit",
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q9",
+   "type": "open",
+   "question": "De quel événement de la veille Alcippe et Philiste parlent-ils quand Dorante les rejoint ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "D'une fête donnée la veille au soir sur l'eau (un festin et une sérénade en bateau sur la Seine) offerte à une dame.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q10",
+   "type": "open",
+   "question": "Citez deux détails chiffrés du festin que Dorante prétend avoir offert.",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il parle de cinq bateaux, dont quatre remplis de musiciens, et d'un repas de six services (de douze plats chacun).",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q11",
+   "type": "open",
+   "question": "Pourquoi Alcippe s’en va-t-il en disant qu’il « meurt de jalousie » ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Parce qu'il croit que la dame à qui Dorante a offert la fête sur l'eau est Clarice, sa fiancée, que son page dit avoir vue sur le bateau.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-1.q12",
+   "type": "open",
+   "question": "Dans la scène 6, pourquoi Dorante juge-t-il plus utile de se dire soldat qu’étudiant en droit pour plaire aux dames ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Parce que les dames admirent les hommes d'épée et leurs récits de guerre, invérifiables, alors qu'un étudiant en droit (homme de robe) ne les fait pas rêver.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q1",
+   "type": "open",
+   "question": "Avant d’accepter Dorante comme époux, que demande Clarice à Géronte ? Que lui propose-t-il ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Clarice veut voir Dorante avant de s'engager ; Géronte propose de passer avec son fils sous ses fenêtres pour qu'elle puisse le regarder.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q2",
+   "type": "open",
+   "question": "Pourquoi le mariage de Clarice et d’Alcippe n’a-t-il pas encore eu lieu ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Parce qu'on attend l'arrivée du père d'Alcippe, qui doit venir (de Tours) pour conclure le mariage.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q3",
+   "type": "open",
+   "question": "Quelle ruse Isabelle propose-t-elle pour que Clarice parle à Dorante sans qu’Alcippe le sache ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Que Clarice parle à Dorante la nuit depuis la fenêtre de Lucrèce, en se faisant passer pour Lucrèce, Lucrèce lui écrivant pour fixer le rendez-vous.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q4",
+   "type": "open",
+   "question": "De quoi Alcippe accuse-t-il Clarice dans la scène 3 ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il l'accuse de lui être infidèle en ayant passé la nuit à la fête sur l'eau donnée par un autre homme (Dorante).",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q5",
+   "type": "open",
+   "question": "Quelle phrase revient plusieurs fois dans cette scène, dans la bouche de Clarice puis d’Alcippe ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "« Mon père va descendre. »",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q6",
+   "type": "open",
+   "question": "Seul en scène (scène 4), que décide Alcippe ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il décide de provoquer Dorante en duel.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q7",
+   "type": "open",
+   "question": "Pourquoi Géronte veut-il marier son fils au plus vite ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "Parce qu'il craint que son fils, fraîchement arrivé à Paris, ne se dérègle, et qu'il veut le fixer et l'établir avant qu'il ne fasse des sottises.",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "The cold answer earns no marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q8",
+   "type": "open",
+   "question": "Pour échapper à ce mariage, Dorante prétend être déjà marié. Avec qui, et dans quelle ville ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Avec Orphise, fille d'Armédon, à Poitiers.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q9",
+   "type": "open",
+   "question": "Dans ce récit, quel objet trahit la présence de Dorante caché dans la chambre ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Sa montre, qui se met à sonner.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q10",
+   "type": "open",
+   "question": "Que devient l’épée de Dorante quand il veut se défendre ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Elle se rompt (se brise) au moment où il veut se défendre.",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit",
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q11",
+   "type": "open",
+   "question": "Pendant ce récit, une didascalie indique que Clarice et Lucrèce regardent depuis leurs fenêtres. Qu’est-ce que Clarice apprend ainsi, et pourquoi la situation est-elle comique ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Clarice voit et apprend que Dorante serait déjà marié ; c'est comique car le spectateur sait que c'est un mensonge inventé pour éviter justement le mariage avec Clarice, qu'il aime sans le savoir.",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit",
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q12",
+   "type": "open",
+   "question": "Quels sont les deux billets que Dorante reçoit à la fin de l’acte, et de qui viennent-ils ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Un billet d'Alcippe qui l'appelle en duel, et un billet de Lucrèce qui lui donne rendez-vous le soir à sa fenêtre.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-2.q13",
+   "type": "open",
+   "question": "Dans son dernier monologue, Dorante résume sa journée en trois mots. Lesquels ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q1",
+   "type": "open",
+   "question": "Qui sépare Dorante et Alcippe pendant leur duel ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Philiste.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q2",
+   "type": "open",
+   "question": "Quel nouveau mensonge Dorante raconte-t-il pour calmer la jalousie d’Alcippe ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il prétend que la dame de la fête sur l'eau était une femme mariée, et non Clarice.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q3",
+   "type": "open",
+   "question": "D’après Philiste, comment le page d’Alcippe s’est-il trompé sur les dames du bateau ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q4",
+   "type": "open",
+   "question": "Complétez le jugement de Philiste sur Dorante : « vaillant par nature et ............................ ».",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "« menteur par coutume ».",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q5",
+   "type": "open",
+   "question": "Selon Isabelle, pourquoi tant de jeunes gens parlent-ils de l’Allemagne et de ses batailles ? D’où tiennent-ils ce qu’ils racontent ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Parce que c'est à la mode et que cela flatte les dames ; ils tiennent leurs récits de la Gazette, sans être jamais allés à la guerre.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q6",
+   "type": "open",
+   "question": "Quelle nouvelle Clarice apprend-elle à Isabelle sur le projet de mariage avec Dorante ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Que Dorante serait déjà marié (à Poitiers), ce qui rend le projet de mariage impossible.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q7",
+   "type": "open",
+   "question": "Dans la scène 5, qui parle réellement à Dorante depuis la fenêtre, et sous quel nom ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "C'est Clarice qui lui parle depuis la fenêtre, en se faisant passer pour Lucrèce.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q8",
+   "type": "open",
+   "question": "Pour prouver qu’il « connaît » celle à qui il croit parler, Dorante donne des détails sur sa famille. Citez-en deux.",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q9",
+   "type": "open",
+   "question": "Quand Dorante jure « que le foudre » l’écrase s’il ment, que lui répond Clarice ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-3.q10",
+   "type": "open",
+   "question": "À la fin de l’acte, Dorante affirme qu’il disait la vérité. Quelle réplique de Cliton explique pourquoi personne ne le croit ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Cliton lui explique en substance que, quand on a l'habitude de mentir, on n'est plus cru même lorsqu'on dit la vérité.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q1",
+   "type": "open",
+   "question": "Au début de l’acte, quel « secret » Dorante veut-il appliquer pour gagner Lucrèce ? Sur qui compte-t-il ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Le secret de gagner la suivante par des présents (de l'argent) ; il compte sur Sabine, la suivante de Lucrèce.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q2",
+   "type": "open",
+   "question": "Quel duel Dorante raconte-t-il à Cliton dans la scène 1 ? Quelle en serait l’issue ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il raconte son duel avec Alcippe et prétend l'avoir tué (laissé pour mort).",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q3",
+   "type": "open",
+   "question": "Quelle nouvelle Alcippe vient-il annoncer dans la scène 2 ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Que son père est arrivé, si bien que son mariage avec Clarice va pouvoir se faire (et il est réconcilié avec Dorante).",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q4",
+   "type": "open",
+   "question": "Comment Dorante explique-t-il à Cliton la guérison si rapide d’Alcippe ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Il prétend connaître un secret magique (des paroles ou un remède appris en Allemagne) qui guérit et ressuscite presque instantanément.",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit",
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q5",
+   "type": "open",
+   "question": "Combien de langues Dorante prétend-il parler ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q6",
+   "type": "open",
+   "question": "Pourquoi Géronte veut-il envoyer Dorante à Poitiers ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Pour aller chercher sa prétendue épouse, Orphise, et la ramener à Paris.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q7",
+   "type": "open",
+   "question": "Quel nouveau mensonge empêche ce voyage ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Dorante prétend que sa femme est enceinte (grosse) et ne peut pas voyager.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q8",
+   "type": "open",
+   "question": "Quel nom Dorante donne-t-il cette fois à son beau-père ? Comment se rattrape-t-il quand Géronte remarque l’erreur ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il l'appelle Pyrandre au lieu d'Armédon ; il se rattrape en prétendant que le beau-père porte deux noms, Pyrandre et Armédon.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q9",
+   "type": "open",
+   "question": "Dans la scène 5, Cliton dit ce dont un menteur a besoin pour ne pas se contredire. De quoi s’agit-il ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Une bonne mémoire (« Il faut bonne mémoire après qu'on a menti »).",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q10",
+   "type": "open",
+   "question": "Que demande Lucrèce à Sabine de répondre à Dorante au sujet de sa lettre ? Est-ce vrai ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Que Lucrèce a déchiré la lettre sans la lire ; ce n'est pas vrai, elle l'a lue.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-4.q11",
+   "type": "open",
+   "question": "Comment Clarice et Lucrèce, chacune à son tour, justifient-elles l’intérêt qu’elles ont montré pour Dorante ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "INCONNU",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "Not answerable without the text (cold answer: unknown)."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q1",
+   "type": "open",
+   "question": "Qu’apprend Géronte de Philiste au sujet de Pyrandre, d’Armédon et d’Orphise ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Que ces personnes n'existent pas à Poitiers : personne ne les connaît, et Dorante n'y a jamais été marié.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q2",
+   "type": "open",
+   "question": "Dans son monologue (scène 2), de quoi Géronte a-t-il honte, en plus de la conduite de son fils ?",
+   "ok": true,
+   "cold": "partial",
+   "coldAnswer": "Il a honte de sa propre crédulité, d'avoir cru si facilement les mensonges de son fils.",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit",
+    "cold_answer"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "warn",
+     "message": "The cold answer earns part of the marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q3",
+   "type": "open",
+   "question": "Selon Géronte, qu’est-ce qui fait qu’on est gentilhomme, et comment peut-on perdre ce titre ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Pour Géronte, on est gentilhomme par la vertu et les actions dignes de sa naissance, pas seulement par le sang ; on perd ce titre par une conduite basse comme le mensonge.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q4",
+   "type": "open",
+   "question": "Pour obtenir l’aide de son père, quel nom de jeune fille Dorante avoue-t-il enfin ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Lucrèce.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q5",
+   "type": "open",
+   "question": "Quelle menace Géronte fait-il à son fils avant d’aller demander la main de la jeune fille ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il le menace, s'il ment encore ou se dédit, de le punir lui-même sévèrement (de le tuer de sa main).",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q6",
+   "type": "open",
+   "question": "Quel trouble Dorante avoue-t-il à Cliton dans la scène 4 ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Il avoue que son cœur hésite, qu'il commence à être touché par Lucrèce alors qu'il croyait aimer l'autre.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q7",
+   "type": "open",
+   "question": "Qu’a vraiment fait Lucrèce de la lettre de Dorante, d’après Sabine ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Elle l'a lue (et relue), au lieu de la déchirer.",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q8",
+   "type": "open",
+   "question": "Comment Dorante comprend-il qu’il s’est trompé sur les noms des deux jeunes filles ?",
+   "ok": true,
+   "cold": "pass",
+   "coldAnswer": "En parlant avec les deux jeunes filles, il comprend par l'allusion à leur rencontre des Tuileries que celle qu'il aimait est Clarice et non Lucrèce.",
+   "failed": [],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": true,
+     "severity": "block",
+     "message": "The cold answer earns no marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  },
+  {
+   "id": "acte-5.q9",
+   "type": "open",
+   "question": "Comment la pièce se termine-t-elle ? Quelle est la morale ironique que Cliton adresse au public ?",
+   "ok": false,
+   "cold": "leak",
+   "coldAnswer": "Dorante épouse finalement Lucrèce et Clarice revient à Alcippe ; Cliton conclut ironiquement à l'adresse du public : « Par un si rare exemple apprenez à mentir ».",
+   "failed": [
+    "cold_answer"
+   ],
+   "warnings": [
+    "evidence_in_unit"
+   ],
+   "checks": [
+    {
+     "id": "evidence_in_unit",
+     "ok": false,
+     "severity": "warn",
+     "message": "No supporting passage given."
+    },
+    {
+     "id": "form:question_yes_no",
+     "ok": true,
+     "severity": "block",
+     "message": "Open question."
+    },
+    {
+     "id": "form:question_multiple_choice",
+     "ok": true,
+     "severity": "warn",
+     "message": "Not a multiple choice."
+    },
+    {
+     "id": "cold_answer",
+     "ok": false,
+     "severity": "block",
+     "message": "Answerable without reading: the cold answer earns full marks."
+    },
+    {
+     "id": "duplicate",
+     "ok": true,
+     "severity": "block",
+     "message": "No near-duplicate."
+    }
+   ]
+  }
+ ]
+}

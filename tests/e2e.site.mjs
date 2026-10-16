@@ -6,7 +6,9 @@ export async function scenario({ page, go, noHScroll, posted, vp, LIVE, KEY, SIT
   const n = await page.evaluate(() => ['acte-1', 'acte-2', 'acte-3', 'acte-4', 'acte-5'].map((id) => document.querySelectorAll('#' + id + ' ol.q > li').length));
   assert.deepEqual(n, [12, 13, 10, 11, 9], 'questions per act');
   const keys = await page.evaluate(() => document.querySelectorAll('#corrige ol.key > li').length);
-  assert.equal(keys, 55, 'one answer per question');
+  assert.equal(keys, 55 + 5, 'one answer per question, plus the 5 reading checkpoints');
+  const cps = await page.evaluate(() => ['acte-1', 'acte-2', 'acte-3', 'acte-4', 'acte-5'].map((id) => document.querySelectorAll('#' + id + ' .checkpoint').length));
+  assert.deepEqual(cps, [1, 1, 1, 1, 1], 'one reading checkpoint per act');
   assert.ok(await page.isVisible('#oral blockquote.extract'));
   for (const f of ['lectoclasse-le-menteur-kit.pdf', 'le-menteur-texte-integral.pdf']) {
     const r = await page.request.get(new URL(f, page.url()).href);
@@ -32,6 +34,7 @@ export async function scenario({ page, go, noHScroll, posted, vp, LIVE, KEY, SIT
   // 3. Collège: rallye sample (text + 10 questions + key + board + certificate).
   await go('college/');
   await noHScroll('college');
+  assert.equal(await page.evaluate(() => document.querySelectorAll('#pp-checkpoints ol.q > li').length), 4, 'rally: 4 reading checkpoints');
   assert.equal(await page.evaluate(() => document.querySelectorAll('#pp-questions ol.q > li').length), 10);
   assert.equal(await page.evaluate(() => document.querySelectorAll('#pp-texte .para').length), 33);
   assert.ok(await page.isVisible('#pp-diplome .cert'));
