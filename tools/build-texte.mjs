@@ -48,7 +48,7 @@ while (i < lines.length) {
 
 const meta = {
   path: '/echantillon/texte/', page: 'text', title: 'Le Menteur de Corneille : texte intégral à imprimer | Lectoclasse',
-  description: 'Le texte complet du Menteur de Corneille (1644), édition Marty-Laveaux de 1862, sans notes ni variantes, à imprimer pour la classe.',
+  description: 'Le texte complet du Menteur de Corneille (1644), édition Marty-Laveaux de 1862, sans notes ni variantes, à imprimer pour la classe.', updated: '2026-10-16',
 };
 const html = `<!--meta ${JSON.stringify(meta)}-->
 <p class="kicker no-print">Kit gratuit · texte intégral</p>

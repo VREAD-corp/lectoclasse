@@ -72,6 +72,24 @@ export async function scenario({ page, go, noHScroll, posted, vp, LIVE, KEY, SIT
   assert.ok(await page.isVisible('#eu-note'), 'EU note shown');
   await shot('devis');
 
+  // 5b. Kit pages: hub + one paid kit page; the CTA preselects the kit on the order page.
+  await go('kits/');
+  await noHScroll('kits');
+  assert.equal(await page.evaluate(() => document.querySelectorAll('main table tbody tr').length), 8, '8 kits listed');
+  await go('kits/therese-raquin/');
+  await noHScroll('kit-therese-raquin');
+  assert.equal(await page.getAttribute('a[href^="https://outils.vread.fr/lectoguide/"]', 'href'), 'https://outils.vread.fr/lectoguide/therese-raquin/');
+  assert.ok(!/session 2027/i.test(await page.textContent('main')));
+  await shot('kit-therese-raquin');
+  const cta = await page.getAttribute('main a.btn', 'href');
+  assert.match(cta, /commander\/\?offre=kit&oeuvre=therese-raquin$/);
+  await go('commander/?offre=kit&oeuvre=therese-raquin');
+  assert.equal(await page.inputValue('#kit'), 'therese-raquin', 'kit preselected');
+  assert.ok(await page.isChecked('input[name=offer][value=kit]'), 'kit offer checked');
+  await go('kits/le-menteur/');
+  await noHScroll('kit-le-menteur');
+  assert.match(await page.getAttribute('main a.btn', 'href'), /echantillon\/$/);
+
   // 6. Card order: CGV required, then the octave-global-checkout module mounts the chosen product; an EU buyer is refused.
   await go('commander/?prix=p390&oeuvre=on-ne-badine');
   await noHScroll('order');

@@ -12,6 +12,7 @@ const files = [];
 (function walk(d) { for (const f of fs.readdirSync(d)) { const p = path.join(d, f); fs.statSync(p).isDirectory() ? walk(p) : p.endsWith('.html') && files.push(p); } })(DOCS);
 const sitemap = fs.readFileSync(path.join(DOCS, 'sitemap.xml'), 'utf8');
 const errors = [];
+const BO_URL = 'https://www.education.gouv.fr/bo/2025/Hebdo30/MENE2518792N';
 const err = (f, m) => errors.push(path.relative(DOCS, f) + ': ' + m);
 const text = (h) => h.replace(/<(script|style|code)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
 
@@ -82,5 +83,26 @@ for (const pdf of ['echantillon/lectoclasse-le-menteur-kit.pdf', 'echantillon/le
 // checkout module vendored byte-identical from octave-global-checkout (local runs)
 const ogMaster = path.join(ROOT, '../octave-global-checkout/dist/og-checkout.js');
 if (fs.existsSync(ogMaster)) assert.equal(fs.readFileSync(path.join(DOCS, 'assets/og-checkout.js'), 'utf8'), fs.readFileSync(ogMaster, 'utf8'), 'og-checkout.js differs from octave-global-checkout/dist');
+// kit pages: one per public-domain bac work, slug = Lectoguide slug, one CTA, link to the guide and to the kit
+const KIT_SLUGS = { 'le-menteur': null, 'on-ne-badine-pas-avec-l-amour': 'on-ne-badine', 'cahier-de-douai': 'cahier-de-douai', 'pot-bouille': 'pot-bouille',
+  'therese-raquin': 'therese-raquin', 'servitude-volontaire': 'servitude-volontaire', 'pluralite-des-mondes': 'pluralite-des-mondes', 'lettres-d-une-peruvienne': 'lettres-peruvienne' };
+const hub = fs.readFileSync(path.join(DOCS, 'kits/index.html'), 'utf8');
+const gated = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/checkpoints/le-menteur.json'), 'utf8')).checkpoints.map((c) => c.question);
+for (const [slug, kit] of Object.entries(KIT_SLUGS)) {
+  const f = path.join(DOCS, 'kits', slug, 'index.html');
+  if (!fs.existsSync(f)) { errors.push('missing kit page ' + slug); continue; }
+  const h = fs.readFileSync(f, 'utf8');
+  if (!hub.includes(`href="../kits/${slug}/"`)) errors.push('hub does not link ' + slug);
+  if (!h.includes(`href="https://outils.vread.fr/lectoguide/${slug}/"`)) errors.push(slug + ': no link to its Lectoguide guide');
+  const btns = [...h.matchAll(/<a class="btn"[^>]*href="([^"]+)"/g)].map((m) => m[1]);
+  if (btns.length !== 1) errors.push(slug + ': expected exactly one CTA, got ' + btns.length);
+  else if (kit ? !btns[0].includes('commander/?offre=kit&amp;oeuvre=' + kit) || !SITE.products.kits[kit] : !btns[0].endsWith('echantillon/')) errors.push(slug + ': CTA ' + btns[0]);
+  if (!/"@type":"BreadcrumbList"/.test(h)) errors.push(slug + ': BreadcrumbList');
+  if (kit && !/"availability":"https:\/\/schema.org\/PreOrder"/.test(h)) errors.push(slug + ': PreOrder offer');
+  if (!h.includes(BO_URL)) errors.push(slug + ': BO source');
+  if (!sitemap.includes(`kits/${slug}/</loc><lastmod>2026-10-17<`)) errors.push(slug + ': sitemap lastmod');
+  // a question shown on a kit page must be one that passed the reading engine (Le Menteur checkpoints)
+  for (const m of h.matchAll(/<blockquote class="extract">([^<]+)<\/blockquote>/g)) if (!gated.includes(m[1].replace(/&#39;/g, "'").replace(/ /g, ' ').trim())) errors.push(slug + ': question not from a gated set: ' + m[1].slice(0, 60));
+}
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`site checks ok: ${files.length} pages, lint-ia >= 85 on all`);

@@ -31,7 +31,7 @@ export default {
     },
   },
   deliveryDate: '30 novembre 2026',
-  nav: [['Lycées', '/'], ['Kit gratuit', '/echantillon/'], ['Collège', '/college/'], ['FLE', '/fle/'], ['Commander', '/commander/'], ['Devis', '/devis/']],
+  nav: [['Lycées', '/'], ['Kits du bac', '/kits/'], ['Kit gratuit', '/echantillon/'], ['Collège', '/college/'], ['FLE', '/fle/'], ['Commander', '/commander/'], ['Devis', '/devis/']],
   scripts: ['app.js'],
   static: [['src/static/lectoclasse-le-menteur-kit.pdf', 'echantillon/lectoclasse-le-menteur-kit.pdf'], ['src/static/le-menteur-texte-integral.pdf', 'echantillon/le-menteur-texte-integral.pdf'], ['src/static/lectoclasse-petit-poucet-rallye.pdf', 'college/lectoclasse-petit-poucet-rallye.pdf']],
   // Never claim an official status, an AEFE or ministry endorsement, a reading proof or a result.
