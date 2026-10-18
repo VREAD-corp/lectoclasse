@@ -6,8 +6,10 @@ var APP = {
   sheetTitle: 'Lectoclasse : devis et statistiques (READ FRANCE SAS)',
   consentVersion: 'devis-2026-10-14',
   adminHash: 'e0e5de6f9ee11f6dbc77fb9408ef9111f5d04f2eb99931b165c3edc68347a642',
-  events: ['view', 'sample_open', 'devis_open', 'sample_download', 'sample_print', 'text_download', 'oral_print', 'rallye_download', 'rallye_print',
+  events: ['view', 'sample_open', 'sample_click', 'devis_open', 'sample_download', 'sample_print', 'text_download', 'oral_print', 'rallye_download', 'rallye_print',
     'order_start', 'checkout_view', 'checkout_open', 'paid', 'devis_submit', 'devis_ok', 'pilot_link_click'],
+  // sample_click (2026-10-18, POOLED-READING-02) replaces sample_open on the links to the free kit page, same event name as on
+  // the other reading sites; sample_open stays accepted for the rows already counted.
   // lc-prix: licence établissement 390 € or 290 € (by day, cro.js). rd-hero (POOLED-READING-01, 2026-10-19): home hero a =
   // current, b = real excerpt of the free kit in the first screen, per tab; same id on the 7 reading sites, pooled analysis.
   xp: { 'lc-prix': ['p390', 'p290'], 'rd-hero': ['a', 'b'] },

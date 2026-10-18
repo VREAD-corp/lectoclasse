@@ -141,7 +141,7 @@ ${k.rows.map((r) => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2] ? fmt(r[2]) 
 function kitPage(k) {
   const free = !k.kit;
   const cta = free
-    ? `<a class="btn" href="{{href:/echantillon/}}" data-mesure="sample_open" data-detail="kit-le-menteur">Ouvrir le kit gratuit</a>`
+    ? `<a class="btn" href="{{href:/echantillon/}}" data-mesure="sample_click" data-detail="kit-le-menteur">Ouvrir le kit gratuit</a>`
     : `<a class="btn" href="{{href:/commander/}}?offre=kit&amp;oeuvre=${k.kit}" data-mesure="order_start" data-detail="kit-${k.kit.slice(0, 20)}">Pré-commander ce kit, 39 €</a>`;
   const status = free
     ? `<p>Le kit est prêt et gratuit, sans inscription : vous pouvez l’imprimer depuis la page web ou télécharger le PDF (12 pages) et le texte intégral (PDF de 27 pages sur deux colonnes).</p>`
