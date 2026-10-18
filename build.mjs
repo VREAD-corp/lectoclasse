@@ -82,7 +82,9 @@ function layout(p) {
   const R = (to) => rel(p.path, to);
   const body = p.body.replace(/\{\{([a-z_]+):([^}]*)\}\}/g, (all, k, v) => (k === 'href' ? R(v) : k === 'asset' ? asset(p, v) : all))
     .replace(/\{\{api\}\}/g, SITE.api).replace(/\{\{repo_url\}\}/g, 'https://github.com/VREAD-corp/' + SITE.repo);
-  const nav = SITE.nav.map(([label, to]) => `<a href="${R(to)}"${to === p.path ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('');
+  // Menu links to the order and quote pages are funnel CTAs: same events as the in-page buttons (detail 'nav').
+  const NAV_MESURE = { '/commander/': 'order_start', '/devis/': 'devis_open' };
+  const nav = SITE.nav.map(([label, to]) => `<a href="${R(to)}"${to === p.path ? ' aria-current="page"' : ''}${NAV_MESURE[to] ? ` data-mesure="${NAV_MESURE[to]}" data-detail="nav"` : ''}>${esc(label)}</a>`).join('');
   const cr = crumbs(p);
   const crumbSchema = cr && { '@type': 'BreadcrumbList', itemListElement: cr.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })) };
   const fil = cr ? `<nav class="fil small no-print" aria-label="Fil d’Ariane">${cr.map(([name, item], i) => (i === cr.length - 1 ? `<span aria-current="page">${esc(name)}</span>` : `<a href="${item.startsWith(ORIGIN + BASE) ? R('/' + item.slice((ORIGIN + BASE).length)) : item}">${esc(name)}</a>`)).join(' › ')}</nav>\n` : '';
