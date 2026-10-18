@@ -100,9 +100,27 @@ for (const [slug, kit] of Object.entries(KIT_SLUGS)) {
   if (!/"@type":"BreadcrumbList"/.test(h)) errors.push(slug + ': BreadcrumbList');
   if (kit && !/"availability":"https:\/\/schema.org\/PreOrder"/.test(h)) errors.push(slug + ': PreOrder offer');
   if (!h.includes(BO_URL)) errors.push(slug + ': BO source');
-  if (!sitemap.includes(`kits/${slug}/</loc><lastmod>2026-10-17<`)) errors.push(slug + ': sitemap lastmod');
+  const lm = sitemap.match(new RegExp(`kits/${slug}/</loc><lastmod>(\\d{4}-\\d{2}-\\d{2})<`));
+  if (!lm || lm[1] < '2026-10-17') errors.push(slug + ': sitemap lastmod');
+  if (!h.includes('href="https://outils.vread.fr/lectopoint/')) errors.push(slug + ': no link to Lectopoint');
   // a question shown on a kit page must be one that passed the reading engine (Le Menteur checkpoints)
   for (const m of h.matchAll(/<blockquote class="extract">([^<]+)<\/blockquote>/g)) if (!gated.includes(m[1].replace(/&#39;/g, "'").replace(/ /g, ' ').trim())) errors.push(slug + ': question not from a gated set: ' + m[1].slice(0, 60));
 }
+// 2026-10-18 CRO/SEO pass: breadcrumbs from outils.vread.fr on inner pages, FAQPage on home and order, footer link to the
+// method page, pooled hero test POOLED-READING-01 (rd-hero) on the home only, real lastmod dates.
+for (const f of files) {
+  const h = fs.readFileSync(f, 'utf8'), rp = path.relative(DOCS, f);
+  if (!h.includes('href="https://outils.vread.fr/a-propos/"')) errors.push(rp + ': footer link to the method page');
+  if (rp === 'index.html' || rp === '404.html') continue;
+  if (!/"@type":"BreadcrumbList","itemListElement":\[\{"@type":"ListItem","position":1,"name":"outils.vread.fr","item":"https:\/\/outils.vread.fr\/"\}/.test(h)) errors.push(rp + ': BreadcrumbList from outils.vread.fr');
+  if (!h.includes('class="fil small no-print"')) errors.push(rp + ': visible breadcrumbs');
+}
+for (const pg of ['index.html', 'commander/index.html']) if (!fs.readFileSync(path.join(DOCS, pg), 'utf8').includes('"@type":"FAQPage"')) errors.push(pg + ': FAQPage');
+const rd = SITE.xp.find((x) => x.id === 'rd-hero');
+if (!rd || rd.mode !== 'tab' || rd.param !== 'hero' || String(rd.variants) !== 'a,b' || !new RegExp(rd.pages).test('/lectoclasse/') || new RegExp(rd.pages).test('/lectoclasse/kits/')) errors.push('rd-hero experiment config');
+if (!SITE.xp.find((x) => x.id === 'lc-prix')) errors.push('lc-prix kept');
+const homeH = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
+if ((homeH.match(/data-hero-excerpt/g) || []).length !== 1) errors.push('home: one hero excerpt');
+for (const m of sitemap.matchAll(/<lastmod>([^<]+)</g)) if (!/^2026-\d{2}-\d{2}$/.test(m[1])) errors.push('lastmod ' + m[1]);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`site checks ok: ${files.length} pages, lint-ia >= 85 on all`);

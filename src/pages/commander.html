@@ -1,14 +1,14 @@
-<!--meta {"path":"/commander/","page":"order","title":"Commander un kit ou une licence Lectoclasse (paiement par carte, hors UE)","description":"Commandez un kit Lectoclasse à 39 €, la licence collège ou la licence établissement. Paiement par carte en euros, réservé aux établissements hors UE.","updated":"2026-10-14"}-->
+<!--meta {"path":"/commander/","page":"order","title":"Commander un kit ou une licence Lectoclasse (paiement par carte, hors UE)","description":"Commandez un kit Lectoclasse à 39 €, la licence collège ou la licence établissement. Paiement par carte en euros, réservé aux établissements hors UE.","updated":"2026-10-18","faq":true}-->
 <p class="kicker">Commande · établissements hors Union européenne</p>
-<h1>Commander</h1>
-<p class="lead">Choisissez l’offre, acceptez les conditions de vente, puis payez par carte en euros. La facture est établie au nom de l’établissement. Vous préférez un virement ? <a href="{{href:/devis/}}">Demandez un devis</a>.</p>
+<h1>Commander un kit ou une licence Lectoclasse</h1>
+<p class="lead">Choisissez l’offre, acceptez les conditions de vente, puis payez par carte en euros. La facture est établie au nom de l’établissement. Vous payez sur devis, avec un bon de commande ou par virement ? <a href="{{href:/devis/}}" data-mesure="devis_open" data-detail="order-lead">Demandez un devis</a>, réponse sous deux jours ouvrés.</p>
 
 <form id="order" class="card" novalidate>
 <fieldset class="choices" id="choix">
 <legend>Votre choix</legend>
 <label><input type="radio" name="offer" value="etablissement" checked> <span><strong>Licence établissement 2026-2027 : <span data-price-etab>390 €</span></strong><br><span class="small">Les huit kits du lycée et le rallye-lecture du collège, pour tout l’établissement, jusqu’au 31 août 2027.</span></span></label>
-<label id="college"><input type="radio" name="offer" value="college"> <span><strong>Licence collège 2026-2027 : 190 €</strong><br><span class="small">Le rallye-lecture sur douze classiques, de la 6e à la 3e.</span></span></label>
-<label><input type="radio" name="offer" value="kit"> <span><strong>Kit à l’unité : 39 €</strong><br><span class="small">Une œuvre au choix ci-dessous.</span></span></label>
+<label id="college"><input type="radio" name="offer" value="college"> <span><strong>Licence collège 2026-2027 : 190 €</strong><br><span class="small">Le rallye-lecture sur douze classiques, de la 6e à la 3e, pour tout l’établissement, jusqu’au 31 août 2027.</span></span></label>
+<label><input type="radio" name="offer" value="kit"> <span><strong>Kit à l’unité : 39 €</strong><br><span class="small">Une œuvre au choix ci-dessous, pour tout l’établissement, sans limite de durée.</span></span></label>
 <div class="field" id="kit-field">
 <label for="kit">Œuvre</label>
 <select id="kit" name="kit">
@@ -24,7 +24,7 @@
 </div>
 </fieldset>
 <div class="note">
-<p><strong>Pré-commande.</strong> Les kits sont envoyés par e-mail au plus tard le 30 novembre 2026. Si nous ne tenons pas cette date, nous remboursons la totalité sur votre carte, sans démarche de votre part. Avant la livraison, un simple e-mail suffit pour être remboursé.</p>
+<p><strong>Pré-commande.</strong> Les kits sont en préparation. Date limite de livraison par e-mail : 30 novembre 2026 (article 5 des conditions de vente). Si elle n’est pas tenue, nous remboursons la totalité sur votre carte, sans démarche de votre part. Avant la livraison, un simple e-mail suffit pour être remboursé.</p>
 <p><strong>Hors Union européenne seulement.</strong> Le paiement refuse les pays de l’Union européenne et Monaco. Prix en euros, sans TVA française (prestation fournie par voie électronique à un établissement situé hors de l’UE). Les éventuelles taxes locales de votre pays ne sont pas incluses.</p>
 </div>
 <label class="inline"><input type="checkbox" id="cgv" name="cgv" required> <span>J’ai lu les <a href="{{href:/cgv/}}">conditions de vente</a> et je commande pour un établissement d’enseignement.</span></label>
@@ -33,3 +33,18 @@
 </form>
 <div id="buy" aria-live="polite"></div>
 <p class="small">Paiement sécurisé par Stripe. Votre reçu ou votre facture (série G-) arrive par e-mail avec le message de confirmation. Une question avant de payer : <a href="mailto:octave@vread.fr">octave@vread.fr</a>.</p>
+
+<section id="avant">
+<h2>Avant de payer</h2>
+<div class="grid2">
+<div><p>Le <a href="{{href:/echantillon/}}" data-sample data-mesure="sample_open" data-detail="order">kit gratuit du <i>Menteur</i></a> montre ce que vous recevez : fiches par acte avec un point de contrôle, corrigé avec l’acte et la scène, fiche d’oral, texte intégral. Les autres kits suivent ce modèle ; leur découpage est sur la page de chaque <a href="{{href:/kits/}}">kit du bac</a>.</p>
+<p>Les questions sont écrites par Octave, l’agent IA de READ FRANCE, puis vérifiées par le moteur de lecture de READ FRANCE : <a href="https://outils.vread.fr/a-propos/">qui fait ce site, et comment</a>.</p></div>
+<div class="previews" style="grid-template-columns: repeat(2, minmax(0, 1fr))">
+<figure><a href="{{href:/echantillon/lectoclasse-le-menteur-kit.pdf}}" data-sample data-mesure="sample_download" data-detail="order-fiche"><img src="{{href:/echantillon/apercu-menteur-p2.webp}}" width="480" height="679" loading="lazy" decoding="async" alt="Fiche de l’acte I du kit du Menteur"></a><figcaption>Une fiche</figcaption></figure>
+<figure><a href="{{href:/echantillon/lectoclasse-le-menteur-kit.pdf}}" data-sample data-mesure="sample_download" data-detail="order-corrige"><img src="{{href:/echantillon/apercu-menteur-p9.webp}}" width="480" height="679" loading="lazy" decoding="async" alt="Corrigé du kit du Menteur"></a><figcaption>Le corrigé</figcaption></figure>
+</div>
+</div>
+<details><summary>Le kit sert-il à un seul professeur ?</summary><p>Non. L’achat donne à l’établissement le droit d’imprimer les fichiers pour tous ses élèves et de les déposer sur son espace numérique de travail (article 7 des conditions de vente).</p></details>
+<details><summary>Et si une question est fausse ?</summary><p>Signalez-la à octave@vread.fr : nous envoyons une version corrigée et datée du fichier (article 8 des conditions de vente).</p></details>
+<details><summary>Il nous faut un devis ou une facture au nom de l’établissement.</summary><p>Le paiement par carte donne un reçu ou une facture numérotée, envoyé par e-mail. Pour un devis, un bon de commande ou un virement, passez par la <a href="{{href:/devis/}}">demande de devis</a> : la commande est confirmée à réception du paiement.</p></details>
+</section>

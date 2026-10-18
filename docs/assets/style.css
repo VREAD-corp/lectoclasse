@@ -132,3 +132,23 @@ table.board th:first-child, table.board td:first-child { text-align: left; }
 .checkpoint p { margin: 4px 0; }
 .fil { margin: 18px 0 0; }
 .fil a { color: var(--muted); }
+/* Home hero: facts line, quote link; POOLED-READING-01 variant b shows a real excerpt of the free kit (html[data-xp-rd-hero=b]). */
+.facts { list-style: none; padding: 0; margin: 14px 0 0; font-size: 0.95rem; color: var(--muted); }
+.facts li { margin: 2px 0; }
+.facts strong { color: var(--ink); }
+.hero-excerpt { display: none; margin: 18px 0 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; font-size: 0.95rem; }
+html[data-xp-rd-hero="b"] .hero-excerpt { display: block; }
+.hero-excerpt .checkpoint { margin: 8px 0 10px; }
+.hero-excerpt ol { margin: 0 0 8px; padding-left: 1.4em; }
+.hero-excerpt figcaption { font-size: 0.85rem; color: var(--muted); }
+@media (min-width: 860px) {
+  html[data-xp-rd-hero="b"] .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 0 28px; align-items: start; }
+  html[data-xp-rd-hero="b"] .hero .hero-excerpt { grid-column: 2; grid-row: 1 / span 6; margin-top: 28px; }
+  html[data-xp-rd-hero="b"] .hero > :not(.hero-excerpt) { grid-column: 1; }
+}
+/* Preview of the free kit (real PDF pages). */
+.previews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+.previews figure { margin: 0; }
+.previews img { display: block; width: 100%; height: auto; aspect-ratio: 480 / 679; border: 1px solid var(--line); border-radius: 4px; background: #fff; box-shadow: 0 1px 3px rgba(34, 29, 22, 0.08); }
+.previews figcaption { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+@media (max-width: 560px) { .previews { grid-template-columns: repeat(3, minmax(90px, 1fr)); gap: 8px; } }

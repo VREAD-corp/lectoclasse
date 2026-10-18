@@ -1,5 +1,5 @@
 // Site configuration read by build.mjs and the tests.
-const ORG = { '@type': 'Organization', name: 'READ FRANCE SAS', url: 'https://outils.vread.fr/lectoclasse/', email: 'octave@vread.fr',
+const ORG = { '@type': 'Organization', name: 'READ FRANCE SAS', url: 'https://outils.vread.fr/a-propos/', email: 'octave@vread.fr',
   address: { '@type': 'PostalAddress', streetAddress: '11 rue Rouvet', postalCode: '75019', addressLocality: 'Paris', addressCountry: 'FR' } };
 const MENTEUR = { '@type': 'Book', name: 'Le Menteur', author: { '@type': 'Person', name: 'Pierre Corneille' }, datePublished: '1644', inLanguage: 'fr' };
 
@@ -16,7 +16,10 @@ export default {
   // A/B on the licence établissement: p390 = 390 €, p290 = 290 €. Alternates by calendar day (Paris), no storage.
   // ?prix=p390|p290 forces one. Every [data-price-etab] element is swapped.
   xp: [{ id: 'lc-prix', variants: ['p390', 'p290'], mode: 'day', tz: 'Europe/Paris', param: 'prix',
-    swap: { p290: [['[data-price-etab]', 'text', '290 €']] } }],
+    swap: { p290: [['[data-price-etab]', 'text', '290 €']] } },
+  // POOLED-READING-01 (2026-10-19): hero a = current, b = first screen shows a real excerpt of the deliverable. Same id on the
+  // 7 reading sites, pooled analysis in vread-revenue-lab. ?hero=b forces b. Drawn once per tab; home page only.
+  { id: 'rd-hero', variants: ['a', 'b'], mode: 'tab', param: 'hero', pages: '^/lectoclasse/$' }],
   products: {
     etablissement: { p390: ['lectoclasse-etab-390', 39000], p290: ['lectoclasse-etab-290', 29000] },
     college: ['lectoclasse-college-190', 19000],
@@ -33,7 +36,8 @@ export default {
   deliveryDate: '30 novembre 2026',
   nav: [['Lycées', '/'], ['Kits du bac', '/kits/'], ['Kit gratuit', '/echantillon/'], ['Collège', '/college/'], ['FLE', '/fle/'], ['Commander', '/commander/'], ['Devis', '/devis/']],
   scripts: ['app.js'],
-  static: [['src/static/lectoclasse-le-menteur-kit.pdf', 'echantillon/lectoclasse-le-menteur-kit.pdf'], ['src/static/le-menteur-texte-integral.pdf', 'echantillon/le-menteur-texte-integral.pdf'], ['src/static/lectoclasse-petit-poucet-rallye.pdf', 'college/lectoclasse-petit-poucet-rallye.pdf']],
+  static: [['src/static/lectoclasse-le-menteur-kit.pdf', 'echantillon/lectoclasse-le-menteur-kit.pdf'], ['src/static/le-menteur-texte-integral.pdf', 'echantillon/le-menteur-texte-integral.pdf'], ['src/static/lectoclasse-petit-poucet-rallye.pdf', 'college/lectoclasse-petit-poucet-rallye.pdf'],
+    ...[2, 9, 13].map((n) => [`src/static/apercu-menteur-p${n}.webp`, `echantillon/apercu-menteur-p${n}.webp`])],
   // Never claim an official status, an AEFE or ministry endorsement, a reading proof or a result.
   claims: [/homologu[ée] par Lectoclasse/i, /(ressource|produit|kit|partenaire|site) officiel/i, /partenaire de l.AEFE/i, /agréé/i, /garanti/i, /certifi/i, /savoir qui a (vraiment )?lu/i, /session 2027/i],
   footerNote: 'Ressource privée, sans lien avec l’AEFE ni avec le ministère de l’Éducation nationale.',

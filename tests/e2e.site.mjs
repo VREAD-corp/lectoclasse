@@ -31,6 +31,21 @@ export async function scenario({ page, go, noHScroll, posted, vp, LIVE, KEY, SIT
   assert.equal(await page.getAttribute('a[data-mesure="pilot_link_click"]', 'href'), 'https://www.vread.fr/ecoles');
   await shot('home');
 
+  // 2b. POOLED-READING-01 (rd-hero): b shows a real excerpt of the free kit in the hero, a hides it; the main CTA stays in the first screen.
+  await go('?hero=b');
+  assert.equal(await page.getAttribute('html', 'data-xp-rd-hero'), 'b');
+  assert.ok(await page.isVisible('.hero-excerpt'), 'excerpt shown in b');
+  assert.match(await page.textContent('.hero-excerpt'), /Pour qui Cliton prévoit-il « du malheur » \?/);
+  const ctaBox = await page.locator('.hero a.btn').first().boundingBox();
+  assert.ok(ctaBox && ctaBox.y + ctaBox.height <= vp.height, 'main CTA in the first screen (b) at ' + vp.width);
+  await noHScroll('home-b');
+  await shot('home-b');
+  await go('?hero=a');
+  assert.equal(await page.getAttribute('html', 'data-xp-rd-hero'), 'a');
+  assert.ok(!(await page.isVisible('.hero-excerpt')), 'excerpt hidden in a');
+  // Preview pages of the free kit load.
+  for (const img of await page.locator('#apercu img').all()) { await img.scrollIntoViewIfNeeded(); assert.ok(await img.evaluate((i) => i.complete && i.naturalWidth === 480), 'preview image'); }
+
   // 3. Collège: rallye sample (text + 10 questions + key + board + certificate).
   await go('college/');
   await noHScroll('college');

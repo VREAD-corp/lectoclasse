@@ -16,10 +16,12 @@
 
   // Print buttons (kit, text, rallye): count, then open the print dialog.
   $$('[data-print]').forEach(function (b) {
-    b.addEventListener('click', function () { track(b.getAttribute('data-print')); goal('download'); window.print(); });
+    b.addEventListener('click', function () { track(b.getAttribute('data-print')); goal('download'); goal('sample'); window.print(); });
   });
   // Downloads counted as a goal (mesure.js already counts the click event itself).
   $$('a[data-mesure$="download"]').forEach(function (a) { a.addEventListener('click', function () { goal('download'); }); });
+  // POOLED-READING-01 secondary metric: any opening or download of the free kit (pages, PDFs, preview images).
+  $$('a[data-mesure^="sample_"], a[data-mesure="text_download"], a[data-sample]').forEach(function (a) { a.addEventListener('click', function () { goal('sample'); }); });
 
   function fillCountries(sel) {
     var dn = null;

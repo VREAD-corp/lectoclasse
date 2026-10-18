@@ -8,9 +8,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const UPDATED = '2026-10-17';
+const UPDATED = '2026-10-18';
 const BO = 'https://www.education.gouv.fr/bo/2025/Hebdo30/MENE2518792N';
 const LG = 'https://outils.vread.fr/lectoguide/';
+// Lectopoint (free checkpoint tool): its library has Le Menteur; for the other works the teacher pastes a passage.
+const LP = 'https://outils.vread.fr/lectopoint/';
+const LP_TEXTS = ['le-menteur'];
+const ORG = { '@type': 'Organization', name: 'READ FRANCE SAS', url: 'https://outils.vread.fr/a-propos/' };
 const OE = {
   theatre: 'Le théâtre du XVIIe siècle au XXIe siècle',
   poesie: 'La poésie du XIXe siècle au XXIe siècle',
@@ -148,8 +152,7 @@ function kitPage(k) {
 <blockquote class="extract">${k.sample.q}</blockquote>
 <p class="small">La réponse et sa scène sont dans le corrigé du kit. Avant publication, cette question a passé le moteur de lecture de READ FRANCE : une personne qui ne disposait que d’un résumé de l’acte n’a pas su y répondre.</p>`
     : '';
-  const body = `<nav class="fil small" aria-label="Fil d’Ariane"><a href="{{href:/}}">Lectoclasse</a> › <a href="{{href:/kits/}}">Kits du bac</a> › ${k.short}</nav>
-<p class="kicker">Kit Lectoclasse · bac de français, épreuve de juin 2027</p>
+  const body = `<p class="kicker">Kit Lectoclasse · bac de français, épreuve de juin 2027</p>
 <h1>${k.h1}</h1>
 <p class="lead">${k.lead}</p>
 <div class="row">${cta}</div>
@@ -201,29 +204,25 @@ ${status}
 </section>
 
 <section id="eleves">
-<h2>Pour les élèves : la fiche Lectoguide</h2>
+<h2>Lectoguide pour les élèves, Lectopoint pour vos propres contrôles</h2>
 <p>Sur Lectoguide, la <a href="${LG}${k.slug}/">fiche de lecture gratuite consacrée à <i>${k.short}</i></a> donne le résumé de chaque partie, des passages clés avec leur référence et cinq questions pour vérifier sa lecture. Elle est publiée par READ FRANCE, comme Lectoclasse. Ses cinq questions peuvent porter sur des détails que les fiches du kit demandent aussi : donnez-la plutôt après vos fiches qu’avant.</p>
+<p>Pour préparer vos propres points de contrôle, ${LP_TEXTS.includes(k.slug) ? `<a href="${LP}?texte=${k.slug}">ouvrez <i>${k.short}</i> dans Lectopoint</a>, l’outil gratuit de READ FRANCE : il découpe le texte en parties et propose pour chacune une question dont la réponse est un mot du texte` : `<a href="${LP}">Lectopoint</a>, l’outil gratuit de READ FRANCE, découpe un passage de <i>${k.short}</i> que vous collez et propose pour chaque partie une question dont la réponse est un mot du texte`}. Rien n’est envoyé sur un serveur.</p>
 <p>Les autres kits : ${KITS.filter((x) => x.slug !== k.slug).map((x) => `<a href="{{href:/kits/${x.slug}/}}"><i>${x.short}</i></a> (${x.author})`).join(', ')}. Tous sont sur la page <a href="{{href:/kits/}}">kits du bac</a>.</p>
 </section>`;
   const url = `https://outils.vread.fr/lectoclasse/kits/${k.slug}/`;
   const book = { '@type': 'Book', name: k.short, author: { '@type': 'Person', name: { Corneille: 'Pierre Corneille', Musset: 'Alfred de Musset', Rimbaud: 'Arthur Rimbaud', Zola: 'Émile Zola', 'La Boétie': 'Étienne de La Boétie', Fontenelle: 'Bernard Le Bouyer de Fontenelle', Graffigny: 'Françoise de Graffigny' }[k.author] }, inLanguage: 'fr' };
   const schema = [
-    { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Lectoclasse', item: 'https://outils.vread.fr/lectoclasse/' },
-      { '@type': 'ListItem', position: 2, name: 'Kits du bac', item: 'https://outils.vread.fr/lectoclasse/kits/' },
-      { '@type': 'ListItem', position: 3, name: k.short, item: url }] },
     free
-      ? { '@type': 'LearningResource', name: `Kit de lecture : ${k.short}`, url, inLanguage: 'fr', isAccessibleForFree: true, educationalLevel: 'Première', about: book, dateModified: UPDATED, learningResourceType: ['questionnaire', 'corrigé', 'fiche d’oral'] }
+      ? { '@type': 'LearningResource', name: `Kit de lecture : ${k.short}`, url, inLanguage: 'fr', isAccessibleForFree: true, educationalLevel: 'Première', about: book, author: ORG, publisher: ORG, datePublished: '2026-10-14', dateModified: UPDATED, learningResourceType: ['questionnaire', 'corrigé', 'fiche d’oral'] }
       : { '@type': 'Product', name: `Kit Lectoclasse : ${k.short}`, brand: { '@type': 'Brand', name: 'Lectoclasse' }, url, description: k.description,
           offers: { '@type': 'Offer', price: '39', priceCurrency: 'EUR', availability: 'https://schema.org/PreOrder', url: `https://outils.vread.fr/lectoclasse/commander/?offre=kit&oeuvre=${k.kit}` }, subjectOf: book },
   ];
-  const meta = { path: `/kits/${k.slug}/`, page: 'kit', updated: UPDATED, title: k.title, description: k.description, schema };
+  const meta = { path: `/kits/${k.slug}/`, page: 'kit', updated: UPDATED, crumb: k.short, title: k.title, description: k.description, schema };
   return `<!--meta ${JSON.stringify(meta)}-->\n${typo(body)}\n`;
 }
 
 function hubPage() {
-  const body = `<nav class="fil small" aria-label="Fil d’Ariane"><a href="{{href:/}}">Lectoclasse</a> › Kits du bac</nav>
-<p class="kicker">Bac de français, épreuve de juin 2027</p>
+  const body = `<p class="kicker">Bac de français, épreuve de juin 2027</p>
 <h1>Les huit kits de lecture des œuvres du bac dans le domaine public</h1>
 <p class="lead">Une page par œuvre : ce que dit le programme, l’édition imprimée, le découpage en fiches et l’état du kit. Le kit du <i>Menteur</i> est prêt et gratuit ; les sept autres sont en pré-commande, livrés au plus tard le 30 novembre 2026.</p>
 <div class="tablewrap"><table>
@@ -241,9 +240,6 @@ ${KITS.map((k) => `<tr><td><a href="{{href:/kits/${k.slug}/}}">${k.author}, <i>$
 <p>Avant de commander, regardez le <a href="{{href:/echantillon/}}">kit complet du <i>Menteur</i></a> : les sept autres suivent le même modèle. Pour les élèves, chaque œuvre a aussi une fiche de lecture gratuite sur <a href="${LG}">Lectoguide</a>.</p>
 </section>`;
   const schema = [
-    { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Lectoclasse', item: 'https://outils.vread.fr/lectoclasse/' },
-      { '@type': 'ListItem', position: 2, name: 'Kits du bac', item: 'https://outils.vread.fr/lectoclasse/kits/' }] },
     { '@type': 'ItemList', name: 'Kits Lectoclasse des œuvres du bac de français dans le domaine public', itemListElement: KITS.map((k, i) => ({ '@type': 'ListItem', position: i + 1, url: `https://outils.vread.fr/lectoclasse/kits/${k.slug}/`, name: k.short })) },
   ];
   const meta = { path: '/kits/', page: 'kits', updated: UPDATED, title: 'Kits de lecture des 8 œuvres du bac de français dans le domaine public | Lectoclasse',
