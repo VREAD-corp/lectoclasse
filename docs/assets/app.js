@@ -91,6 +91,9 @@
     var hash = location.hash.replace('#', ''), off = q.get('offre') || (hash === 'college' ? 'college' : '');
     if (off) { var rr = $('input[name=offer][value="' + off + '"]', of); if (rr) rr.checked = true; }
     if (q.get('oeuvre') && P.kits[q.get('oeuvre')]) { of.kit.value = q.get('oeuvre'); $('input[name=offer][value=kit]', of).checked = true; }
+    // Arrival on the order page (funnel step between order_start and checkout_open); a prerendered page counts once opened.
+    var seen = function () { track('checkout_view', of.offer.value || ''); };
+    if (document.prerendering) document.addEventListener('prerenderingchange', seen, { once: true }); else seen();
     var syncKit = function () { $('#kit-field').classList.toggle('hidden', of.offer.value !== 'kit'); };
     $$('input[name=offer]', of).forEach(function (r) { r.addEventListener('change', syncKit); });
     syncKit();

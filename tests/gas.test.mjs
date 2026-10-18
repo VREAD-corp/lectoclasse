@@ -71,6 +71,8 @@ assert.equal(post({ action: 'track', v: 2, site: 'other-site', page: '/', event:
 assert.equal(post({ action: 'track', v: 2, site: APP.site, page: '/', event: 'nope' }).field, 'event');
 post({ action: 'track', v: 2, site: APP.site, page: '/', event: APP.events[2], detail: 'BAD VALUE!' });
 assert.equal(sheets.Stats.rows.at(-1)[5], '', 'detail outside the slug pattern is dropped');
+post({ action: 'track', v: 2, site: APP.site, page: '/commander/', event: 'checkout_view', detail: 'college' });
+assert.deepEqual([...sheets.Stats.rows.at(-1).slice(2, 6)], ['/commander/', 'checkout_view', '', 'college'], 'arrival on the order page is counted');
 
 // devis: validation
 assert.equal(post({ ...base, consent: false }).error, 'consent_required');
