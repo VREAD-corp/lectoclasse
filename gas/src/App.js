@@ -8,7 +8,9 @@ var APP = {
   adminHash: 'e0e5de6f9ee11f6dbc77fb9408ef9111f5d04f2eb99931b165c3edc68347a642',
   events: ['view', 'sample_open', 'devis_open', 'sample_download', 'sample_print', 'text_download', 'oral_print', 'rallye_download', 'rallye_print',
     'order_start', 'checkout_open', 'paid', 'devis_submit', 'devis_ok', 'pilot_link_click'],
-  xp: { 'lc-prix': ['p390', 'p290'] },   // licence établissement 390 € or 290 € (by day, cro.js)
+  // lc-prix: licence établissement 390 € or 290 € (by day, cro.js). rd-hero (POOLED-READING-01, 2026-10-19): home hero a =
+  // current, b = real excerpt of the free kit in the first screen, per tab; same id on the 7 reading sites, pooled analysis.
+  xp: { 'lc-prix': ['p390', 'p290'], 'rd-hero': ['a', 'b'] },
   variantXp: 'lc-prix',
   // EUR, shown on the site (the server catalogue of octave-global-checkout is the price authority for card sales)
   offers: { etablissement: { p390: 390, p290: 290 }, college: 190, kits: 39, 'fle-100': 290, 'fle-400': 590, autre: 0 },

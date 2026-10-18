@@ -34,6 +34,8 @@ var EU_ALL = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 
 // Shared cro.js counters (Cro.js): same spreadsheet, same day boundary and pages as the Stats tab.
 var CRO_SITES_ = [APP.site];
 var CRO_EXPERIMENTS_ = APP.xp;
+// A/B goals beyond the built-in metrics: 'sample' (free kit opened or downloaded, secondary metric of POOLED-READING-01).
+var CRO_GOALS_ = ['sample'];
 var CRO_TZ_ = APP.tz;
 function croBook_() { return ss_(); }
 function croPage_(site, page) { return trackPage_(page); }

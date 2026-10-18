@@ -130,6 +130,10 @@ if (key) {
 assert.equal(post({ action: 'track', kind: 'cro', v: 2, site: APP.site, page: '/' + APP.site + '/', device: 'desktop', e: [['pv', '', ''], ['scroll', '', '50'], ['xp', APP.variantXp, xpVar + '.n']] }).ok, true);
 assert.ok(sheets.Comportement.rows.length >= 3);
 assert.ok(sheets.Experiences.rows.length >= 2);
+// POOLED-READING-01: rd-hero views, CTA and the 'sample' goal are kept; an unknown goal is dropped
+const xpBefore = sheets.Experiences.rows.length;
+assert.equal(post({ action: 'track', kind: 'cro', v: 2, site: APP.site, page: '/' + APP.site + '/', device: 'mobile', e: [['xp', 'rd-hero', 'b.n'], ['xp', 'rd-hero', 'b.view'], ['xp', 'rd-hero', 'b.cta'], ['xp', 'rd-hero', 'b.sample'], ['xp', 'rd-hero', 'b.nogoal']] }).ok, true);
+assert.equal(sheets.Experiences.rows.length - xpBefore, 4, 'rd-hero n/view/cta/sample recorded, unknown goal dropped');
 assert.notEqual(post({ action: 'track', kind: 'cro', v: 2, site: 'other', page: '/', e: [['pv', '', '']] }).ok, true);
 
 console.log('gas tests ok (' + APP.site + ')');
